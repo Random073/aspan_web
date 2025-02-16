@@ -140,6 +140,25 @@ export default {
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+.mobile-menu-button {
+   display: none;
+   background: none;
+   border: none;
+   font-size: 24px;
+   color: #1E3A8A;
+   cursor: pointer;
+}
+
+.mobile-menu {
+   position: absolute;
+   top: 80px;
+   left: 0;
+   width: 100%;
+   background: white;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .mobile-menu-item {
    display: block;
    padding: 16px;
@@ -156,9 +175,6 @@ export default {
       display: none;
    }
    .mobile-menu-button {
-      display: block;
-   }
-   .mobile-menu {
       display: block;
    }
 }
