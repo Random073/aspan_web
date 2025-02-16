@@ -16,7 +16,6 @@ export default {
       onMounted(() => {
          initThreeJS();
          createIslands(5);
-         setupDraggableIslands();
       });
 
       function initThreeJS() {
