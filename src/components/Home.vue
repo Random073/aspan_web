@@ -56,6 +56,7 @@ export default {
 .cta-button {
    padding: 1rem 2.5rem;
    font-size: 1.2rem;
+   font-weight: bold;
    background-color: #ffffff;
    border: none;
    border-radius: 30px;
