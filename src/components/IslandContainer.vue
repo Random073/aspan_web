@@ -94,7 +94,7 @@ export default {
          ];
 
          positions.forEach(pos => {
-            loader.load('@/src/assets/islandTennis.glb', (gltf) => {
+            loader.load('src/assets/islandTennis.glb', (gltf) => {
                const island = gltf.scene;
 
                // Set position, scale, and rotation
