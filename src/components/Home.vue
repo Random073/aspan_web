@@ -1,9 +1,9 @@
 <template>
-   <header class="hero">
+   <section class="hero">
       <h1 class="hero-title">Build Knowledge<br>Island by Island</h1>
       <p class="hero-subtitle">Microlearning meets creative gamification</p>
       <button class="cta-button">Start Your Journey</button>
-   </header>
+   </section>
 
    <section class="features">
       <div class="feature-card">
@@ -42,7 +42,6 @@ export default {
    font-size: 3.5rem;
    margin-bottom: 1.5rem;
    color: #ffffff;
-   z-index: 3;
 }
 
 .hero-subtitle {
@@ -50,7 +49,6 @@ export default {
    margin-bottom: 3rem;
    opacity: 0.9;
    color: #ffffff;
-   z-index: 3;
 }
 
 .cta-button {
@@ -63,7 +61,6 @@ export default {
    color: #1261D8;
    cursor: pointer;
    transition: transform 0.3s ease, box-shadow 0.3s ease;
-   z-index: 3;
 }
 
 .cta-button:hover {
