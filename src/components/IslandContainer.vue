@@ -42,7 +42,7 @@ export default {
 
          renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
          renderer.setSize(window.innerWidth, window.innerHeight);
-         renderer.outputEncoding = THREE.sRGBEncoding;
+         renderer.outputEncoding = THREE.SRGBColorSpace;
          renderer.toneMapping = THREE.ACESFilmicToneMapping;
          renderer.toneMappingExposure = 1.2;
          renderer.domElement.style.pointerEvents = 'none'; // Initially allow clicks through
