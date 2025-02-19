@@ -15,6 +15,9 @@ export default {
       let currentDragIsland = null;
       const raycaster = new THREE.Raycaster();
 
+      const autoRotationSpeed = 0.0003; // Base rotation speed
+      const autoRotationVariation = 0.0005; // Variation between islands
+
       const dragSensitivity = 0.001;
       const momentumFactor = 0.2;
       const frictionFactor = 0.95;
@@ -28,7 +31,7 @@ export default {
          scene = new THREE.Scene();
 
          const aspect = window.innerWidth / window.innerHeight;
-         const frustumSize = 10;
+         const frustumSize = 11;
          camera = new THREE.OrthographicCamera(
             (-frustumSize * aspect) / 2,
             (frustumSize * aspect) / 2,
@@ -37,7 +40,7 @@ export default {
             0.1,
             1000
          );
-         camera.position.set(0, 0, 10);
+         camera.position.set(0, 0, 15);
          camera.lookAt(scene.position);
 
          renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -56,7 +59,7 @@ export default {
          scene.add(ambientLight);
 
          window.addEventListener('scroll', () => {
-            camera.zoom = Math.max(0.3, 1 - window.scrollY * 0.0003);
+            camera.zoom = Math.max(0.3, 0.8 - window.scrollY * 0.0003);
             camera.updateProjectionMatrix();
          });
 
@@ -173,6 +176,10 @@ export default {
          function animate() {
             requestAnimationFrame(animate);
             islands.forEach(island => {
+               if (!island.isDragging) {
+                  island.mesh.rotation.y += island.autoRotationSpeed;
+               }
+
                if (!island.isDragging && island.rotationVelocity) {
                   island.mesh.rotation.x += island.rotationVelocity.x || 0;
                   island.mesh.rotation.y += island.rotationVelocity.y || 0;
@@ -191,11 +198,11 @@ export default {
          const loader = new GLTFLoader();
          // Positions of the islands
          const positions = [
-            { x: -5, y: 1.5, z: 1.5, rotX: Math.PI / 5, rotY: -Math.PI / 10, rotZ: -0.2 },
+            { x: -6, y: 1.5, z: 1.5, rotX: Math.PI / 5, rotY: -Math.PI / 10, rotZ: -0.2 },
             { x: -6.2, y: -3, z: 0.2, rotX: Math.PI / 8, rotY: -Math.PI / 15, rotZ: -0.2 },
-            { x: 6, y: 1.8, z: 0.5, rotX: Math.PI / 4.5, rotY: Math.PI / 5,rotZ: 0.1 },
+            { x: 6.5, y: 1.8, z: 0.5, rotX: Math.PI / 4.5, rotY: Math.PI / 5,rotZ: 0.1 },
             { x: 6.5, y: -2.5, z: 0, rotX: Math.PI / 8, rotY: -Math.PI / 20, rotZ: 0.2 },
-            { x: 0, y: -3, z: 1, rotX: Math.PI / 15, rotY: 0, rotZ: 0 },
+            { x: 0, y: -3.3, z: 1, rotX: Math.PI / 15, rotY: 0, rotZ: 0 },
          ];
          // Load the island models
          const islandFiles = [
@@ -216,10 +223,11 @@ export default {
                   island.rotation.set(pos.rotX, pos.rotY, pos.rotZ);
                   scene.add(island);
                   islands.push({
-                  mesh: island,
-                  isDragging: false,
-                  rotationVelocity: { x: 0, y: 0 },
-                  dragStart: null
+                     mesh: island,
+                     isDragging: false,
+                     rotationVelocity: { x: 0, y: 0 },
+                     dragStart: null,
+                     autoRotationSpeed: autoRotationSpeed + (Math.random() * autoRotationVariation)
                   });
                },
                undefined,
