@@ -1,5 +1,5 @@
 <template>
-  <div ref="threeContainer" class="three-container"></div>
+   <div ref="threeContainer" class="three-container"></div>
 </template>
 
 <script>
@@ -15,10 +15,9 @@ export default {
       let currentDragIsland = null;
       const raycaster = new THREE.Raycaster();
 
-      // Adjusted drag parameters for a heavier feel.
-      const dragSensitivity = 0.001; // Lower sensitivity for smoother, slower rotation.
-      const momentumFactor = 0.2;    // Lower momentum so rotations don't spin too fast.
-      const frictionFactor = 0.95;   // Increased friction to "weigh" the rotations.
+      const dragSensitivity = 0.001;
+      const momentumFactor = 0.2;
+      const frictionFactor = 0.95;
 
       onMounted(() => {
          initThreeJS();
@@ -28,7 +27,6 @@ export default {
       function initThreeJS() {
          scene = new THREE.Scene();
 
-         // Set up an orthographic camera.
          const aspect = window.innerWidth / window.innerHeight;
          const frustumSize = 10;
          camera = new THREE.OrthographicCamera(
@@ -44,14 +42,12 @@ export default {
 
          renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
          renderer.setSize(window.innerWidth, window.innerHeight);
-         // Improve the appearance of textures.
          renderer.outputEncoding = THREE.sRGBEncoding;
          renderer.toneMapping = THREE.ACESFilmicToneMapping;
          renderer.toneMappingExposure = 1.2;
-         renderer.domElement.style.pointerEvents = 'auto';
+         renderer.domElement.style.pointerEvents = 'none'; // Initially allow clicks through
          threeContainer.value.appendChild(renderer.domElement);
 
-         // Updated Lighting for brighter, more defined islands.
          const sunLight = new THREE.DirectionalLight(0xffffff, 0.8);
          sunLight.position.set(3, 5, 5);
          scene.add(sunLight);
@@ -59,30 +55,11 @@ export default {
          const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
          scene.add(ambientLight);
 
-         // Additional lights for extra fill.
-         const spotLight1 = new THREE.SpotLight(0xffffff, 1);
-         spotLight1.position.set(-5, 5, 5);
-         scene.add(spotLight1);
-
-         const spotLight2 = new THREE.SpotLight(0xffffff, 1);
-         spotLight2.position.set(5, 5, 5);
-         scene.add(spotLight2);
-
-         const pointLight1 = new THREE.PointLight(0xffffff, 1.5, 50);
-         pointLight1.position.set(0, 5, 5);
-         scene.add(pointLight1);
-
-         const pointLight2 = new THREE.PointLight(0xffffff, 1.5, 50);
-         pointLight2.position.set(0, -5, 5);
-         scene.add(pointLight2);
-
-         // Scroll zoom: adjust camera zoom based on scroll.
          window.addEventListener('scroll', () => {
             camera.zoom = Math.max(0.3, 1 - window.scrollY * 0.0003);
             camera.updateProjectionMatrix();
          });
 
-         // Resize event.
          window.addEventListener('resize', () => {
             const aspect = window.innerWidth / window.innerHeight;
             camera.left = (-frustumSize * aspect) / 2;
@@ -93,13 +70,14 @@ export default {
             renderer.setSize(window.innerWidth, window.innerHeight);
          });
 
-         // --- Drag Interaction Setup ---
+         // Hover detection
+         window.addEventListener('mousemove', onMouseMove);
+
          renderer.domElement.addEventListener('pointerdown', onPointerDown);
          renderer.domElement.addEventListener('pointermove', onPointerMove);
          renderer.domElement.addEventListener('pointerup', onPointerUp);
          renderer.domElement.addEventListener('pointerleave', onPointerUp);
 
-         // Helper: Traverse parent chain to find the island.
          function getIslandFromMesh(mesh) {
             let current = mesh;
             while (current) {
@@ -108,6 +86,28 @@ export default {
                current = current.parent;
             }
             return null;
+         }
+
+         function onMouseMove(event) {
+            if (currentDragIsland) {
+               renderer.domElement.style.pointerEvents = 'auto';
+               return;
+            }
+
+            const rect = renderer.domElement.getBoundingClientRect();
+            const mouse = new THREE.Vector2(
+               ((event.clientX - rect.left) / rect.width) * 2 - 1,
+               -((event.clientY - rect.top) / rect.height) * 2 + 1
+            );
+            raycaster.setFromCamera(mouse, camera);
+            const clickableMeshes = [];
+            islands.forEach(obj => {
+               obj.mesh.traverse(child => {
+                  if (child.isMesh) clickableMeshes.push(child);
+               });
+            });
+            const intersects = raycaster.intersectObjects(clickableMeshes, true);
+            renderer.domElement.style.pointerEvents = intersects.length > 0 ? 'auto' : 'none';
          }
 
          function onPointerDown(event) {
@@ -167,8 +167,8 @@ export default {
                currentDragIsland.dragStart = null;
                currentDragIsland = null;
             }
+            window.dispatchEvent(new Event('mousemove'));
          }
-         // --- End Drag Interaction Setup ---
 
          function animate() {
             requestAnimationFrame(animate);
@@ -189,13 +189,15 @@ export default {
 
       function createIslands() {
          const loader = new GLTFLoader();
+         // Positions of the islands
          const positions = [
-            { x: -5, y: 1.5, z: 1.5, rotX: Math.PI / 5, rotY: -Math.PI / 10, rotZ: -0.2 },  // Upper-left
-            { x: -6.2, y: -3, z: 0.2, rotX: Math.PI / 8, rotY: -Math.PI / 15, rotZ: -0.2 }, // Lower-left
-            { x: 6, y: 1.8, z: 0.5, rotX: Math.PI / 4.5, rotY: Math.PI / 5,rotZ: 0.1 }, // Upper-right
-            { x: 6.5, y: -2.5, z: 0, rotX: Math.PI / 8, rotY: -Math.PI / 20, rotZ: 0.2 }, // Lower-right
-            { x: 0, y: -3, z: 1, rotX: Math.PI / 15, rotY: 0, rotZ: 0 },  // Center-bottom
+            { x: -5, y: 1.5, z: 1.5, rotX: Math.PI / 5, rotY: -Math.PI / 10, rotZ: -0.2 },
+            { x: -6.2, y: -3, z: 0.2, rotX: Math.PI / 8, rotY: -Math.PI / 15, rotZ: -0.2 },
+            { x: 6, y: 1.8, z: 0.5, rotX: Math.PI / 4.5, rotY: Math.PI / 5,rotZ: 0.1 },
+            { x: 6.5, y: -2.5, z: 0, rotX: Math.PI / 8, rotY: -Math.PI / 20, rotZ: 0.2 },
+            { x: 0, y: -3, z: 1, rotX: Math.PI / 15, rotY: 0, rotZ: 0 },
          ];
+         // Load the island models
          const islandFiles = [
             '/aspan_web/assets/islandTennis.glb',
             '/aspan_web/assets/islandHouse.glb',
@@ -231,15 +233,15 @@ export default {
    },
 };
 </script>
-
+ 
 <style scoped>
 .three-container {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  pointer-events: none;
+   position: absolute;
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   pointer-events: none;
 }
 </style>
