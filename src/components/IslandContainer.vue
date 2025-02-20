@@ -40,8 +40,12 @@ export default {
             0.1,
             1000
          );
-         camera.position.set(0, 0, 15);
+         camera.position.set(0, 0, 11);
          camera.lookAt(scene.position);
+
+         const initialZoom = 0.8;
+         camera.zoom = initialZoom; // Set initial zoom
+         camera.updateProjectionMatrix();
 
          renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
          renderer.setSize(window.innerWidth, window.innerHeight);
@@ -59,7 +63,15 @@ export default {
          scene.add(ambientLight);
 
          window.addEventListener('scroll', () => {
-            camera.zoom = Math.max(0.3, 0.8 - window.scrollY * 0.0003);
+            const scrollY = window.scrollY;
+            const zoomFactor = 0.0003; // Controls how much zoom changes with scroll
+            const minZoom = 0.3; // Minimum zoom level
+            const maxZoom = initialZoom; // Maximum zoom level (initial zoom)
+            const smoothZoom = initialZoom - scrollY * zoomFactor * 0.5; // Adjust 0.5 for smoother transition
+            // Clamp the zoom value between minZoom and maxZoom
+            let newZoom = Math.max(minZoom, Math.min(maxZoom, smoothZoom));
+            // Apply the new zoom value
+            camera.zoom = newZoom;
             camera.updateProjectionMatrix();
          });
 
@@ -198,10 +210,10 @@ export default {
          const loader = new GLTFLoader();
          // Positions of the islands
          const positions = [
-            { x: -6, y: 1.5, z: 1.5, rotX: Math.PI / 5, rotY: -Math.PI / 10, rotZ: -0.2 },
-            { x: -6.2, y: -3, z: 0.2, rotX: Math.PI / 8, rotY: -Math.PI / 15, rotZ: -0.2 },
-            { x: 6.5, y: 1.8, z: 0.5, rotX: Math.PI / 4.5, rotY: Math.PI / 5,rotZ: 0.1 },
-            { x: 6.5, y: -2.5, z: 0, rotX: Math.PI / 8, rotY: -Math.PI / 20, rotZ: 0.2 },
+            { x: -7.5, y: 2, z: 1.5, rotX: Math.PI / 5, rotY: -Math.PI / 10, rotZ: -0.2 },
+            { x: -7.2, y: -3.5, z: 0.2, rotX: Math.PI / 8, rotY: -Math.PI / 15, rotZ: -0.2 },
+            { x: 7.5, y: 1.8, z: 0.5, rotX: Math.PI / 4.5, rotY: Math.PI / 5,rotZ: 0.1 },
+            { x: 7.5, y: -3.2, z: 0, rotX: Math.PI / 8, rotY: -Math.PI / 20, rotZ: 0.2 },
             { x: 0, y: -3.3, z: 1, rotX: Math.PI / 15, rotY: 0, rotZ: 0 },
          ];
          // Load the island models
@@ -219,7 +231,7 @@ export default {
                (gltf) => {
                   const island = gltf.scene;
                   island.position.set(pos.x, pos.y, pos.z);
-                  island.scale.set(0.6, 0.6, 0.6);
+                  island.scale.set(0.8, 0.8, 0.8);
                   island.rotation.set(pos.rotX, pos.rotY, pos.rotZ);
                   scene.add(island);
                   islands.push({

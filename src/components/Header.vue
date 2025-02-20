@@ -4,13 +4,8 @@
          <h1 class="logo">ASpan</h1>
 
          <nav class="nav">
-            <div class="nav-item">
-               <button class="nav-button">Home</button>
-               <div class="dropdown">
-                  <a href="#" class="dropdown-item">Microlessons</a>
-                  <a href="#" class="dropdown-item">Islands</a>
-               </div>
-            </div>
+            <a href="#" class="nav-link">Microlessons</a>
+            <a href="#" class="nav-link">Islands</a>
             <a href="#" class="nav-link">Volunteer</a>
             <a href="#" class="nav-link">Hackathon</a>
             <a href="#" class="nav-link">About Us</a>
@@ -20,13 +15,11 @@
       </div>
 
       <div v-if="mobileMenuOpen" class="mobile-menu">
-         <a href="#" class="mobile-menu-item">Home</a>
          <a href="#" class="mobile-menu-item">Microlessons</a>
          <a href="#" class="mobile-menu-item">Islands</a>
          <a href="#" class="mobile-menu-item">Volunteer</a>
          <a href="#" class="mobile-menu-item">Hackathon</a>
-         <a href="#" class="mobile-menu-item">Our Team</a>
-         <a href="#" class="mobile-menu-item">About Project</a>
+         <a href="#" class="mobile-menu-item">About Us</a>
       </div>
    </header>
 </template>
@@ -57,6 +50,7 @@ export default {
    top: 0;
    left: 0;
    z-index: 50;
+   pointer-events: all;
 }
 
 .container {
@@ -93,7 +87,7 @@ export default {
 }
 
 .nav-button:hover, .nav-link:hover {
-   color: #2563EB;
+   color: #5889f1;
 }
 
 .nav-item {
