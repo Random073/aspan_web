@@ -1,4 +1,5 @@
 <template>
+   <section class="blue-screen"></section>
    <section class="hero">
       <h1 class="hero-title">Build Knowledge<br>Island by Island</h1>
       <p class="hero-subtitle">Microlearning meets creative gamification</p>
@@ -29,13 +30,23 @@ export default {
 
 <style scoped>
 
+.blue-screen {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   z-index: -1;
+   background: #2b79ed;
+}
+
 .hero {
    position: relative;
    padding: 8rem 2rem;
    text-align: center;
    z-index: 1;
    height: 100vh;
-   background: #1261D8;
+   background: transparent;
 }
 
 .hero-title {

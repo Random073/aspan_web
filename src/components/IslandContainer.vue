@@ -5,27 +5,36 @@
 <script>
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, onUnmounted } from 'vue';
 
 export default {
    setup() {
       const threeContainer = ref(null);
+      const isMobile = ref(window.innerWidth <= 768);
+      const dragSensitivity = 0.001;
+      const momentumFactor = 0.2;
+      const frictionFactor = 0.95;
       let scene, camera, renderer;
       let islands = [];
       let currentDragIsland = null;
       const raycaster = new THREE.Raycaster();
 
-      const autoRotationSpeed = 0.0003; // Base rotation speed
-      const autoRotationVariation = 0.0005; // Variation between islands
-
-      const dragSensitivity = 0.001;
-      const momentumFactor = 0.2;
-      const frictionFactor = 0.95;
+      const autoRotationSpeed = 0.0003;
+      const autoRotationVariation = 0.0005;
 
       onMounted(() => {
          initThreeJS();
          createIslands();
+         window.addEventListener('resize', handleResize);
       });
+
+      onUnmounted(() => {
+         window.removeEventListener('resize', handleResize);
+      });
+
+      function handleResize() {
+         isMobile.value = window.innerWidth <= 768;
+      }
 
       function initThreeJS() {
          scene = new THREE.Scene();
@@ -43,8 +52,8 @@ export default {
          camera.position.set(0, 0, 11);
          camera.lookAt(scene.position);
 
-         const initialZoom = 0.8;
-         camera.zoom = initialZoom; // Set initial zoom
+         const initialZoom = isMobile.value ? 0.6 : 0.8;
+         camera.zoom = initialZoom;
          camera.updateProjectionMatrix();
 
          renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -52,25 +61,30 @@ export default {
          renderer.outputEncoding = THREE.SRGBColorSpace;
          renderer.toneMapping = THREE.ACESFilmicToneMapping;
          renderer.toneMappingExposure = 1.2;
-         renderer.domElement.style.pointerEvents = 'none'; // Initially allow clicks through
+         renderer.domElement.style.pointerEvents = 'none';
          threeContainer.value.appendChild(renderer.domElement);
 
          const sunLight = new THREE.DirectionalLight(0xffffff, 0.8);
          sunLight.position.set(3, 5, 5);
          scene.add(sunLight);
 
-         const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-         scene.add(ambientLight);
+         scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+
+         if (!isMobile.value) {
+            renderer.domElement.addEventListener('pointerdown', onPointerDown);
+            renderer.domElement.addEventListener('pointermove', onPointerMove);
+            renderer.domElement.addEventListener('pointerup', onPointerUp);
+            renderer.domElement.addEventListener('pointerleave', onPointerUp);
+            window.addEventListener('mousemove', onMouseMove);
+         }
 
          window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            const zoomFactor = 0.0003; // Controls how much zoom changes with scroll
-            const minZoom = 0.3; // Minimum zoom level
-            const maxZoom = initialZoom; // Maximum zoom level (initial zoom)
-            const smoothZoom = initialZoom - scrollY * zoomFactor * 0.5; // Adjust 0.5 for smoother transition
-            // Clamp the zoom value between minZoom and maxZoom
-            let newZoom = Math.max(minZoom, Math.min(maxZoom, smoothZoom));
-            // Apply the new zoom value
+            const zoomFactor = 0.0003;
+            const minZoom = isMobile.value ? 0.4 : 0.3;
+            const maxZoom = initialZoom;
+            const smoothZoom = initialZoom - scrollY * zoomFactor * 0.5;
+            const newZoom = Math.max(minZoom, Math.min(maxZoom, smoothZoom));
             camera.zoom = newZoom;
             camera.updateProjectionMatrix();
          });
@@ -188,17 +202,12 @@ export default {
          function animate() {
             requestAnimationFrame(animate);
             islands.forEach(island => {
-               if (!island.isDragging) {
-                  island.mesh.rotation.y += island.autoRotationSpeed;
-               }
-
-               if (!island.isDragging && island.rotationVelocity) {
-                  island.mesh.rotation.x += island.rotationVelocity.x || 0;
-                  island.mesh.rotation.y += island.rotationVelocity.y || 0;
+               island.mesh.rotation.y += island.autoRotationSpeed;
+               if (!isMobile.value && !island.isDragging && island.rotationVelocity) {
+                  island.mesh.rotation.x += island.rotationVelocity.x;
+                  island.mesh.rotation.y += island.rotationVelocity.y;
                   island.rotationVelocity.x *= frictionFactor;
                   island.rotationVelocity.y *= frictionFactor;
-                  if (Math.abs(island.rotationVelocity.x) < 0.00001) island.rotationVelocity.x = 0;
-                  if (Math.abs(island.rotationVelocity.y) < 0.00001) island.rotationVelocity.y = 0;
                }
             });
             renderer.render(scene, camera);
@@ -208,22 +217,37 @@ export default {
 
       function createIslands() {
          const loader = new GLTFLoader();
-         // Positions of the islands
-         const positions = [
-            { x: -7.5, y: 2, z: 1.5, rotX: Math.PI / 5, rotY: -Math.PI / 10, rotZ: -0.2 },
-            { x: -7.2, y: -3.5, z: 0.2, rotX: Math.PI / 8, rotY: -Math.PI / 15, rotZ: -0.2 },
-            { x: 7.5, y: 1.8, z: 0.5, rotX: Math.PI / 4.5, rotY: Math.PI / 5,rotZ: 0.1 },
-            { x: 7.5, y: -3.2, z: 0, rotX: Math.PI / 8, rotY: -Math.PI / 20, rotZ: 0.2 },
-            { x: 0, y: -3.3, z: 1, rotX: Math.PI / 15, rotY: 0, rotZ: 0 },
-         ];
-         // Load the island models
-         const islandFiles = [
-            '/aspan_web/assets/islandTennis.glb',
-            '/aspan_web/assets/islandHouse.glb',
-            '/aspan_web/assets/islandGarage.glb',
-            '/aspan_web/assets/islandFootball.glb',
-            '/aspan_web/assets/islandFerrariF40.glb'
-         ];
+         let positions, islandFiles, scale;
+
+         if (isMobile.value) {
+            positions = [
+               { x: -2.5, y: 4, z: 1.5, rotX: Math.PI/5, rotY: -Math.PI/10, rotZ: -0.2 },
+               { x: -2.3, y: -4, z: 0, rotX: Math.PI/10, rotY: -Math.PI/12, rotZ: -0.3 },
+               { x: 3.5, y: 0.5, z: 0.5, rotX: Math.PI/4.5, rotY: Math.PI/5, rotZ: 0.1 }
+            ];
+            islandFiles = [
+               '/aspan_web/assets/islandTennis.glb',
+               '/aspan_web/assets/islandFerrariF40.glb',
+               '/aspan_web/assets/islandFootball.glb'
+            ];
+            scale = 0.75;
+         } else {
+            positions = [
+               { x: -7.5, y: 2, z: 1.5, rotX: Math.PI/5, rotY: -Math.PI/10, rotZ: -0.2 },
+               { x: -7.2, y: -3.5, z: 0.2, rotX: Math.PI/8, rotY: -Math.PI/15, rotZ: -0.2 },
+               { x: 7.5, y: 1.8, z: 0.5, rotX: Math.PI/4.5, rotY: Math.PI/5, rotZ: 0.1 },
+               { x: 7.5, y: -3.2, z: 0, rotX: Math.PI/8, rotY: -Math.PI/20, rotZ: 0.2 },
+               { x: 0, y: -3.3, z: 1, rotX: Math.PI/15, rotY: 0, rotZ: 0 },
+            ];
+            islandFiles = [
+               '/aspan_web/assets/islandTennis.glb',
+               '/aspan_web/assets/islandHouse.glb',
+               '/aspan_web/assets/islandGarage.glb',
+               '/aspan_web/assets/islandFootball.glb',
+               '/aspan_web/assets/islandFerrariF40.glb'
+            ];
+            scale = 0.8;
+         }
 
          positions.forEach((pos, index) => {
             loader.load(
@@ -231,7 +255,7 @@ export default {
                (gltf) => {
                   const island = gltf.scene;
                   island.position.set(pos.x, pos.y, pos.z);
-                  island.scale.set(0.8, 0.8, 0.8);
+                  island.scale.set(scale, scale, scale);
                   island.rotation.set(pos.rotX, pos.rotY, pos.rotZ);
                   scene.add(island);
                   islands.push({
@@ -243,9 +267,7 @@ export default {
                   });
                },
                undefined,
-               (error) => {
-                  console.error('Error loading model:', error);
-               }
+               (error) => console.error('Error loading model:', error)
             );
          });
       }
@@ -263,5 +285,12 @@ export default {
    left: 0;
    z-index: 2;
    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+   .three-container {
+      z-index: 0;
+      opacity: 0.9;
+   }
 }
 </style>
