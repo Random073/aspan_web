@@ -28,11 +28,32 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { ref, watch, onMounted, onUnmounted } from 'vue';
 
 export default {
    setup() {
+      const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      
       const mobileMenuOpen = ref(false);
+      const isMobile = ref(
+        (window.innerWidth <= 768 || isIOS) && isTouchDevice
+      );
+
+      const checkMobile = () => {
+        isMobile.value = (window.innerWidth <= 768 || isIOS) && isTouchDevice;
+      };
+
+      onMounted(() => {
+        window.addEventListener('resize', checkMobile);
+        window.addEventListener('orientationchange', checkMobile);
+      });
+
+      onUnmounted(() => {
+        window.removeEventListener('resize', checkMobile);
+        window.removeEventListener('orientationchange', checkMobile);
+      });
+
       const toggleMobileMenu = () => {
          mobileMenuOpen.value = !mobileMenuOpen.value;
       };
@@ -192,13 +213,24 @@ export default {
    opacity: 0;
    transform: translateY(-20px);
 }
+@supports (-webkit-touch-callout: none) {
+  .header {
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .mobile-menu {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
 
-@media (max-width: 768px) {
-   .nav {
-      display: none;
-   }
-   .mobile-menu-button {
-      display: block;
-   }
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  .nav {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
 }
 </style>

@@ -9,8 +9,27 @@ import { onMounted, ref, onUnmounted } from 'vue';
 
 export default {
    setup() {
+      const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      const isMobile = ref(
+         (window.innerWidth <= 768 || isIOS) && isTouchDevice
+      );
+
+      const checkMobile = () => {
+         isMobile.value = (window.innerWidth <= 768 || isIOS) && isTouchDevice;
+         // Update Three.js camera on resize
+         if (camera) {
+            const aspect = window.innerWidth / window.innerHeight;
+            const frustumSize = isMobile.value ? 14 : 11;
+            camera.left = (-frustumSize * aspect) / 2;
+            camera.right = (frustumSize * aspect) / 2;
+            camera.top = frustumSize / 2;
+            camera.bottom = -frustumSize / 2;
+            camera.updateProjectionMatrix();
+         }
+      };
+
       const threeContainer = ref(null);
-      const isMobile = ref(window.innerWidth <= 768);
       const dragSensitivity = 0.001;
       const momentumFactor = 0.2;
       const frictionFactor = 0.95;
@@ -25,22 +44,20 @@ export default {
       onMounted(() => {
          initThreeJS();
          createIslands();
-         window.addEventListener('resize', handleResize);
+         window.addEventListener('resize', checkMobile);
+         window.addEventListener('orientationchange', checkMobile);
       });
 
       onUnmounted(() => {
-         window.removeEventListener('resize', handleResize);
+         window.removeEventListener('resize', checkMobile);
+         window.removeEventListener('orientationchange', checkMobile);
       });
-
-      function handleResize() {
-         isMobile.value = window.innerWidth <= 768;
-      }
 
       function initThreeJS() {
          scene = new THREE.Scene();
 
          const aspect = window.innerWidth / window.innerHeight;
-         const frustumSize = 11;
+         const frustumSize = isMobile.value ? 14 : 11;
          camera = new THREE.OrthographicCamera(
             (-frustumSize * aspect) / 2,
             (frustumSize * aspect) / 2,
