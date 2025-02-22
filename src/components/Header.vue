@@ -188,7 +188,7 @@ export default {
    align-items: center;
    gap: 2rem;
    flex: 1;
-   justify-content: center;
+   justify-content: top;
 }
 
 .mobile-menu-item {
