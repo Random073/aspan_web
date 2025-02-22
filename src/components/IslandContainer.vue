@@ -238,16 +238,16 @@ export default {
 
          if (isMobile.value) {
             positions = [
-               { x: -2.5, y: 4, z: 1.5, rotX: Math.PI/5, rotY: -Math.PI/10, rotZ: -0.2 },
-               { x: -2.3, y: -4, z: 0, rotX: Math.PI/10, rotY: -Math.PI/12, rotZ: -0.3 },
-               { x: 3.5, y: 0.5, z: 0.5, rotX: Math.PI/4.5, rotY: Math.PI/5, rotZ: 0.1 }
+               { x: -3.5, y: 5, z: 1.5, rotX: Math.PI/5, rotY: -Math.PI/10, rotZ: -0.2 },
+               { x: -2.5, y: -6, z: 0, rotX: Math.PI/10, rotY: -Math.PI/12, rotZ: -0.3 },
+               { x: 4, y: -1, z: 0.5, rotX: Math.PI/4.5, rotY: Math.PI/5, rotZ: 0.1 }
             ];
             islandFiles = [
                '/aspan_web/assets/islandTennis.glb',
                '/aspan_web/assets/islandFerrariF40.glb',
                '/aspan_web/assets/islandFootball.glb'
             ];
-            scale = 0.75;
+            scale = 0.95;
          } else {
             positions = [
                { x: -7.5, y: 2, z: 1.5, rotX: Math.PI/5, rotY: -Math.PI/10, rotZ: -0.2 },
