@@ -1,7 +1,7 @@
 <template>
    <header class="header">
       <div class="container">
-         <h1 class="logo">ASpan</h1>
+         <a href="#" class="logo">ASpan</a>
          <nav class="nav">
             <a href="#" class="nav-link">Microlessons</a>
             <a href="#" class="nav-link">Islands</a>

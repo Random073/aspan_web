@@ -6,20 +6,50 @@
       <button class="cta-button">Start Your Journey</button>
    </section>
 
-   <section class="features">
-      <div class="feature-card">
-         <h3>Earn Tokens</h3>
-         <p>Complete lessons to collect credits and expand your island</p>
-      </div>
-      <div class="feature-card">
-         <h3>Micro Lessons</h3>
-         <p>Bite-sized courses in finance, tech, history and more</p>
-      </div>
-      <div class="feature-card">
-         <h3>Build Islands</h3>
-         <p>Use your earned credits to build new islands</p>
+   <section class="problem-section">
+      <div class="problem-container">
+         <div class="problem-statement">
+            <h2 class="classic-heading-centred">Lack of education</h2>
+            <p class="classic-description-centred">There is lack of education, genuinely.</p>
+         </div>
+         <div class="solution-statement">
+            <h2 class="classic-heading-centred">Enter ASpan</h2>
+            <p class="classic-description-centred">You ain't seen nothing yet...</p>
+         </div>
+         <div class="problem-statement-image">
+            <img src="/assets/problem-map.png" alt="Not enough schools in Kazakhstan">
+         </div>
+         <div class="solution-statement-image">
+            <img src="/assets/aspan-screen-gallery.png" alt="Gallery of panels of ASpan app">
+         </div>
       </div>
    </section>
+
+   <section class="widgets-section">
+      <div class="widget-container">
+         <div class="widget square"></div>
+         <div class="widget square"></div>
+         <div class="widget square"></div>
+         <div class="widget rectangle-h"></div>
+         <div class="widget rectangle-v"></div>
+         <div class="widget square"></div>
+         <div class="widget square"></div>
+      </div>
+   </section>
+
+   <section class="features-section">
+      <div class="features-grid">
+         <div class="topics-image">
+            <img src="/assets/features-screen.png" alt="Topics">
+         </div>
+         <div class="topics-text">
+            <h2 class="classic-heading">Hundreds of Topics</h2>
+            <p class="classic-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere incidunt, repellat dolorem nobis sapiente velit! Officiis culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex excepturi minima vel quidem!</p>
+         </div>
+      </div>
+   </section>
+
+
 </template>
 
 <script>
@@ -29,6 +59,8 @@ export default {
 </script>
 
 <style scoped>
+
+/* Islands */
 
 .blue-screen {
    position: absolute;
@@ -79,26 +111,153 @@ export default {
    box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
 }
 
-.features {
+/* Problem */
+
+.problem-section {
+   display: flex;
+   justify-content: center;
+   padding: 4rem 0;
+   background-color: #f6faff;
+}
+
+.problem-container {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(2, 1fr);
+   grid-auto-rows: minmax(5vw, auto);
+   gap: 4rem;
+   width: 90%;
+   max-width: 1200px;
+}
+
+.classic-heading-centred {
+   font-size: 2.5rem;
+   font-family: Helvetica, sans-serif;
+   font-weight: bold;
+   color: #1261D8;
+   margin-bottom: 1rem;
+   text-align: center;
+}
+
+.classic-description-centred {
+   font-size: 1.2rem;
+   color: #333;
+   text-align: center;
+}
+
+.problem-statement-image,
+.solution-statement-image {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.problem-statement-image img,
+.solution-statement-image img {
+   width: 100%;
+   height: auto;
+   max-width: 800px;
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+/* Widgets */
+
+.widgets-section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 4rem 0;
+   background: rgb(0,36,125);
+   background: linear-gradient(1600deg, rgba(0,36,125,1) 0%, rgba(25,98,216,1) 26%, rgba(64,152,255,1) 94%); 
+}
+
+.widget-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: minmax(10vw, auto);
    gap: 2rem;
-   padding: 4rem 2rem;
-   position: relative;
-   z-index: 1;
-   background-color: white;
+   width: 90%;
+   max-width: 1200px;
 }
 
-.feature-card {
-   background: rgba(255, 255, 255, 0.9);
-   padding: 2rem;
+.widget {
+   background: #ffffff;
+   padding: 2vw;
    border-radius: 20px;
-   border: 1px solid #ddd;
-   transition: transform 0.3s ease;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.feature-card:hover {
-   transform: translateY(-10px);
+.one {
+   grid-column: 2;
+   grid-row: 1;
+}
+
+.two {
+   grid-column: 2;
+   grid-row: 2;
+}
+
+.square {
+   aspect-ratio: 1 / 1;
+}
+
+.rectangle-h {
+   aspect-ratio: 2 / 1;
+   grid-column: span 2;
+   width: 100%;
+}
+
+.rectangle-v {
+   aspect-ratio: 1 / 2;
+   grid-row: span 2;
+   height: 100%;
+}
+
+/* Features */
+
+.features-section {
+   display: flex;
+   justify-content: center;
+   padding: 4rem 0;
+   background: #ffffff;
+}
+
+.features-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem;
+   align-items: center;
+   max-width: 1200px;
+   width: 90%;
+}
+
+.topics-image {
+   width: 340px;
+}
+
+.topics-image img {
+   display: block;
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+   margin-left: 40%;
+}
+
+.topics-text {
+   padding: 1rem;
+}
+
+.classic-heading {
+   font-size: 2.5rem;
+   font-family: Helvetica, sans-serif;
+   font-weight: bold;
+   color: #1261D8;
+   margin-bottom: 1rem;
+}
+
+.classic-description {
+   font-size: 1.2rem;
+   color: #333;
 }
 
 </style>
