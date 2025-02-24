@@ -210,6 +210,7 @@ export default {
 .rectangle-v {
    aspect-ratio: 1 / 2;
    grid-row: span 2;
+   width: 100%;
    height: 100%;
 }
 
@@ -258,6 +259,77 @@ export default {
 .classic-description {
    font-size: 1.2rem;
    color: #333;
+}
+
+@media (max-width: 768px) {
+   /* Problem Section */
+   .problem-container {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .problem-statement {
+      order: 1;
+   }
+
+   .problem-statement-image {
+      order: 2;
+   }
+
+   .solution-statement {
+      order: 3;
+   }
+
+   .solution-statement-image {
+      order: 4;
+   }
+
+   /* Widgets Section */
+   .widget-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+   }
+
+   .widget {
+      width: 90%;
+      max-width: 400px;
+   }
+
+   .square {
+      height: auto;
+      aspect-ratio: 1 / 1;
+   }
+
+   .rectangle-h {
+      height: auto;
+      aspect-ratio: 2 / 1;
+   }
+
+   .rectangle-v {
+      height: auto;
+      aspect-ratio: 1 / 2;
+   }
+
+   /* Features Section */
+   .features-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+   }
+
+   .topics-image {
+      width: 100%;
+   }
+
+   .topics-image img {
+      margin-left: 0;
+      padding-right: 2%;
+   }
+
+   .topics-text {
+      padding: 0;
+   }
 }
 
 </style>

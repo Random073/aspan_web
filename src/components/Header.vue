@@ -225,7 +225,7 @@ export default {
   }
 }
 
-@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+@media (max-width: 600px), (hover: none) and (pointer: coarse) {
   .nav {
     display: none;
   }
