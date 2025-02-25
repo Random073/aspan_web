@@ -39,17 +39,39 @@
 
    <section class="features-section">
       <div class="features-grid">
-         <div class="topics-image">
+         <div class="topics-image first-order">
             <img src="/assets/features-screen.png" alt="Topics">
          </div>
-         <div class="topics-text">
+         <div class="topics-text second-order">
             <h2 class="classic-heading">Hundreds of Topics</h2>
             <p class="classic-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere incidunt, repellat dolorem nobis sapiente velit! Officiis culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex excepturi minima vel quidem!</p>
          </div>
+
+         <div class="topics-text third-order">
+            <h2 class="classic-heading">Hundreds of Topics</h2>
+            <p class="classic-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere incidunt, repellat dolorem nobis sapiente velit! Officiis culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex excepturi minima vel quidem!</p>
+         </div>
+         <div class="topics-image fourth-order">
+            <img src="/assets/features-screen.png" alt="Topics">
+         </div>
+
+         <div class="topics-image fifth-order">
+            <img src="/assets/features-screen.png" alt="Topics">
+         </div>
+         <div class="topics-text sixth-order">
+            <h2 class="classic-heading">Hundreds of Topics</h2>
+            <p class="classic-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere incidunt, repellat dolorem nobis sapiente velit! Officiis culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex excepturi minima vel quidem!</p>
+         </div>
+
+         <div class="topics-text seventh-order ">
+            <h2 class="classic-heading">Hundreds of Topics</h2>
+            <p class="classic-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere incidunt, repellat dolorem nobis sapiente velit! Officiis culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex excepturi minima vel quidem!</p>
+         </div>
+         <div class="topics-image eighth-order">
+            <img src="/assets/features-screen.png" alt="Topics">
+         </div>
       </div>
    </section>
-
-
 </template>
 
 <script>
@@ -314,10 +336,19 @@ export default {
 
    /* Features Section */
    .features-grid {
-      grid-template-columns: 1fr;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
    }
 
+   .first-order {order: 1;}
+   .second-order {order: 2;}
+   .third-order {order: 4;}
+   .fourth-order {order: 3;}
+   .fifth-order {order: 5;}
+   .sixth-order {order: 6;}
+   .seventh-order {order: 8;}
+   .eighth-order {order: 7;}
+   
    .topics-image {
       width: 100%;
    }
