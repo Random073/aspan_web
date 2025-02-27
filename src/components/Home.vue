@@ -1,4 +1,5 @@
 <template>
+   <IslandContainer />
    <section class="blue-screen"></section>
    <section class="hero">
       <h1 class="hero-title">Build Knowledge<br>Island by Island</h1>
@@ -75,8 +76,12 @@
 </template>
 
 <script>
-export default {
+import IslandContainer from "./IslandContainer.vue";
 
+export default {
+   components: {
+      IslandContainer,
+   },
 };
 </script>
 

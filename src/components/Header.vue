@@ -1,13 +1,18 @@
 <template>
    <header class="header">
       <div class="container">
-         <a href="#" class="logo">ASpan</a>
+         <RouterLink to="/" class="logo">ASpan</RouterLink>
          <nav class="nav">
-            <a href="#" class="nav-link">Microlessons</a>
+            <RouterLink to="/microlessons" class="nav-link">Microlessons</RouterLink>
+            <RouterLink to="/islands" class="nav-link">Islands</RouterLink>
+            <RouterLink to="/volunteer" class="nav-link">Volunteer</RouterLink>
+            <RouterLink to="/hackathon" class="nav-link">Hackathon</RouterLink>
+            <RouterLink to="/about-us" class="nav-link">About Us</RouterLink>
+            <!-- <a href="#" class="nav-link">Microlessons</a>
             <a href="#" class="nav-link">Islands</a>
             <a href="#" class="nav-link">Volunteer</a>
             <a href="#" class="nav-link">Hackathon</a>
-            <a href="#" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">About Us</a> -->
          </nav>
          <button class="mobile-menu-button" @click="toggleMobileMenu">☰</button>
       </div>
@@ -16,11 +21,16 @@
          <div v-if="mobileMenuOpen" class="mobile-menu">
             <button class="close-button" @click="toggleMobileMenu">×</button>
             <div class="mobile-menu-content">
-               <a href="#" class="mobile-menu-item">Microlessons</a>
+               <RouterLink to="/microlessons" class="mobile-menu-item">Microlessons</RouterLink>
+               <RouterLink to="/islands" class="mobile-menu-item">Islands</RouterLink>
+               <RouterLink to="/volunteer" class="mobile-menu-item">Volunteer</RouterLink>
+               <RouterLink to="/hackathon" class="mobile-menu-item">Hackathon</RouterLink>
+               <RouterLink to="/about-us" class="mobile-menu-item">About Us</RouterLink>
+               <!-- <a href="#" class="mobile-menu-item">Microlessons</a>
                <a href="#" class="mobile-menu-item">Islands</a>
                <a href="#" class="mobile-menu-item">Volunteer</a>
                <a href="#" class="mobile-menu-item">Hackathon</a>
-               <a href="#" class="mobile-menu-item">About Us</a>
+               <a href="#" class="mobile-menu-item">About Us</a> -->
             </div>
          </div>
       </transition>
@@ -29,6 +39,7 @@
 
 <script>
 import { ref, watch, onMounted, onUnmounted } from 'vue';
+import { RouterLink, RouterView } from 'vue-router';
 
 export default {
    setup() {

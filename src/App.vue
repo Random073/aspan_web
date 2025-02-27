@@ -1,20 +1,17 @@
 <template>
-   <IslandContainer />
-   <Home />
    <Header />
+   <main>
+      <RouterView />
+   </main>
    <Footer />
 </template>
 
 <script>
-import Home from './components/Home.vue';
-import IslandContainer from './components/IslandContainer.vue';
 import Header from './components/Header.vue';
-import Footer from './components/Footer.vue'
+import Footer from './components/Footer.vue';
 
 export default {
    components: {
-      Home,
-      IslandContainer,
       Header,
       Footer,
    },
@@ -22,5 +19,8 @@ export default {
 </script>
 
 <style>
-/* Global styles (if needed) */
+/* Global styles */
+main {
+  padding-top: 80px; /* Adjust for fixed header */
+}
 </style>
