@@ -6,25 +6,27 @@ import Islands from "/src/components/Islands.vue";
 import Volunteer from "/src/components/Volunteer.vue";
 import Hackathon from "/src/components/Hackathon.vue";
 import AboutUs from "/src/components/AboutUs.vue";
+import TermsOfUse from "/src/components/TermsofUse.vue";
+import PrivacyPolicy from "/src/components/PrivacyPolicy.vue";
 
 const routes = [
-   {
-      path: "/",
-      component: Home,
-      children: [
-         { path: "", component: IslandContainer },
-      ],
-   },
-   { path: "/microlessons", component: Microlessons },
-   { path: "/islands", component: Islands },
-   { path: "/volunteer", component: Volunteer },
-   { path: "/hackathon", component: Hackathon },
-   { path: "/about-us", component: AboutUs },
+  {
+    path: "/",
+    component: Home,
+    children: [{ path: "", component: IslandContainer }],
+  },
+  { path: "/microlessons", component: Microlessons },
+  { path: "/islands", component: Islands },
+  { path: "/volunteer", component: Volunteer },
+  { path: "/hackathon", component: Hackathon },
+  { path: "/about-us", component: AboutUs },
+  { path: "/terms-of-use", component: TermsOfUse },
+  { path: "/privacy-policy", component: PrivacyPolicy },
 ];
 
 const router = createRouter({
-   history: createWebHistory("/aspan_web"),
-   routes,
+  history: createWebHistory("/aspan_web"),
+  routes,
 });
 
 export default router;
