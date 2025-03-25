@@ -2,9 +2,11 @@
   <IslandContainer />
   <section class="blue-screen"></section>
   <section class="hero">
-    <h1 class="hero-title">Build Knowledge<br />Island by Island</h1>
-    <p class="hero-subtitle">Microlearning meets creative gamification</p>
-    <button class="cta-button">Start Your Journey</button>
+    <div class="hero-content">
+      <h1 class="hero-title">Build Knowledge<br />Island by Island</h1>
+      <p class="hero-subtitle">Microlearning meets creative gamification</p>
+      <button class="cta-button">Start Your Journey</button>
+    </div>
   </section>
 
   <section class="problem-section">
@@ -115,25 +117,33 @@ export default {
 
 <style scoped>
 /* Islands */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh; /* Use dynamic viewport height */
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
+  background: transparent;
+}
+
+.hero-content {
+  margin-bottom: 20vh;
+  transform: translateY(-10%);
+  width: 100%;
+}
 
 .blue-screen {
-  position: absolute;
+  position: fixed; /* Change from absolute to fixed */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   z-index: -1;
   background: #2b79ed;
-}
-
-.hero {
-  position: relative;
-  padding: 8rem 2rem;
-  text-align: center;
-  z-index: 1;
-  height: 100vh;
-  background: transparent;
-  align-items: center;
 }
 
 .hero-title {
@@ -190,6 +200,17 @@ export default {
   gap: 4rem;
   width: 90%;
   max-width: 1200px;
+  height: 100%;
+  align-items: start;
+  justify-items: center;
+}
+
+.problem-statement,
+.solution-statement {
+  width: 100%;
+  max-width: 100%;
+  max-width: 600px;
+  padding: 0;
 }
 
 .classic-heading-centred {
@@ -199,6 +220,8 @@ export default {
   color: #1261d8;
   margin-bottom: 1rem;
   text-align: center;
+  width: 100%;
+  margin: auto;
 }
 
 .classic-description-centred {
@@ -321,12 +344,17 @@ export default {
   font-family: Helvetica, sans-serif;
   font-weight: bold;
   color: #1261d8;
-  margin-bottom: 1rem;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
 }
 
 .classic-description {
   font-size: 1.2rem;
   color: #333;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
@@ -425,4 +453,3 @@ export default {
   }
 }
 </style>
-

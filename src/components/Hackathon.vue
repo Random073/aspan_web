@@ -1,11 +1,8 @@
 <template>
-   <h1>Hackathon</h1>
+  <h1>Hackathon</h1>
 </template>
 
-<script>
+<script></script>
 
-</script>
+<style scoped></style>
 
-<style>
-
-</style>
