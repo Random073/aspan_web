@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "/src/components/Home.vue";
 import IslandContainer from "/src/components/IslandContainer.vue";
 import Microlessons from "/src/components/Microlessons.vue";
@@ -25,7 +25,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory("/aspan_web"),
+  history: createWebHashHistory("/aspan_web"),
   routes,
 });
 
