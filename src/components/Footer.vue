@@ -1,27 +1,27 @@
 <template>
   <footer class="main-footer">
     <div class="social-links">
-      <a href="https://www.instagram.com" target="_blank">
+      <a href="https://www.instagram.com/aspanapp/" target="_blank">
         <img src="/assets/instagram-icon.png" alt="Instagram" />
       </a>
-      <a href="https://www.whatsapp.com" target="_blank">
+      <a href="https://wa.me/77473889664" target="_blank">
         <img src="/assets/whatsapp-icon.png" alt="WhatsApp" />
       </a>
     </div>
 
     <ul class="footer-navigation">
-      <li><RouterLink to="/" class="footer-element">Home</RouterLink></li>
+      <li><RouterLink to="/" class="footer-element">Главная</RouterLink></li>
       <li>
-        <RouterLink to="/about-us" class="footer-element">About Us</RouterLink>
+        <RouterLink to="/about-us" class="footer-element">О нас</RouterLink>
       </li>
       <li>
         <RouterLink to="/terms-of-use" class="footer-element"
-          >Terms of Use</RouterLink
+          >Условия использования</RouterLink
         >
       </li>
       <li>
         <RouterLink to="/privacy-policy" class="footer-element"
-          >Privacy Policy</RouterLink
+          >Политика конфиденциальности</RouterLink
         >
       </li>
     </ul>

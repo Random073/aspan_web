@@ -3,23 +3,32 @@
   <section class="blue-screen"></section>
   <section class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">Build Knowledge<br />Island by Island</h1>
-      <p class="hero-subtitle">Microlearning meets creative gamification</p>
-      <button class="cta-button">Start Your Journey</button>
+      <h1 class="hero-title">Строй знания<br />Остров за Островом</h1>
+      <p class="hero-subtitle">Проходи микроуроки в игровом формате</p>
+      <button class="cta-button" @click="scrollToWidgets">
+        Начни свой путь
+      </button>
     </div>
   </section>
 
   <section class="problem-section">
     <div class="problem-container">
       <div class="problem-statement">
-        <h2 class="classic-heading-centred">Lack of education</h2>
+        <h2 class="classic-heading-centred">Нехватка обучения</h2>
         <p class="classic-description-centred">
-          There is lack of education, genuinely.
+          На сегодняшний день в стране не хватает 270,000 учебных мест и 5 тысяч
+          учителей. В интернете нет полезнах и доступных материалов для изучения
+          различных тем на казахском и русском языках.
         </p>
       </div>
       <div class="solution-statement">
-        <h2 class="classic-heading-centred">Enter ASpan</h2>
-        <p class="classic-description-centred">You ain't seen nothing yet...</p>
+        <h2 class="classic-heading-centred">Но есть ASpan</h2>
+        <p class="classic-description-centred">
+          ASpan это - приложение, которое предоставляет качественные материалы в
+          интересном игровом формате. Наши микро-уроки были специально
+          составленные учениками и учителями НИШа для максимально легкого и
+          быстрого усвоения информации.
+        </p>
       </div>
       <div class="problem-statement-image">
         <img
@@ -36,70 +45,84 @@
     </div>
   </section>
 
-  <section class="widgets-section">
+  <section id="widgets-section" class="widgets-section">
     <div class="widget-container">
-      <div class="widget square"></div>
-      <div class="widget square"></div>
-      <div class="widget square"></div>
-      <div class="widget rectangle-h"></div>
-      <div class="widget rectangle-v"></div>
-      <div class="widget square"></div>
-      <div class="widget square"></div>
+      <div class="widget square">
+        <img src="/assets/lessons-square.png" alt="Уроки" />
+      </div>
+      <div class="widget square">
+        <img src="/assets/quiz-square.png" alt="Квиз" />
+      </div>
+      <div class="widget square">
+        <img src="/assets/categories-square.png" alt="Острова" />
+      </div>
+      <div class="widget rectangle-h">
+        <img src="/assets/review-rectangleh.png" alt="Обзор" />
+      </div>
+      <div class="widget rectangle-v">
+        <img src="/assets/hearts-rectanglev.png" alt="Сердца" />
+      </div>
+      <div class="widget square">
+        <img src="/assets/streak-square.png" alt="Стрик" />
+      </div>
+      <div class="widget square">
+        <img src="/assets/islands-square.png" alt="Длительность" />
+      </div>
     </div>
   </section>
 
   <section class="features-section">
     <div class="features-grid">
       <div class="topics-image first-order">
-        <img src="/assets/features-screen.png" alt="Topics" />
+        <img src="/assets/features-topics.png" alt="Topics" />
       </div>
       <div class="topics-text second-order">
-        <h2 class="classic-heading">Hundreds of Topics</h2>
+        <h2 class="classic-heading">Куча различных тем</h2>
         <p class="classic-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-          facere incidunt, repellat dolorem nobis sapiente velit! Officiis
-          culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex
-          excepturi minima vel quidem!
+          В нашем приложении представлено множество разнообразных тем, чтобы
+          удовлетворить любые интересы пользователей. Здесь вы найдёте материалы
+          о ЗОЖ, финансах, космосе, истории, биологии и искусстве. Каждая тема
+          разработана с учётом современных тенденций и потребностей, чтобы вы
+          могли получить актуальную и полезную информацию. Мы уверены, что
+          каждый найдёт что-то интересное и полезное для себя.
         </p>
       </div>
 
       <div class="topics-text third-order">
-        <h2 class="classic-heading">Hundreds of Topics</h2>
+        <h2 class="classic-heading">Уроки на каждую тему</h2>
         <p class="classic-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-          facere incidunt, repellat dolorem nobis sapiente velit! Officiis
-          culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex
-          excepturi minima vel quidem!
+          На каждую тему у нас есть масса уроков, которые помогут разобраться во
+          всём от начала до конца. Все уроки понятные и логичные, так что даже
+          если ты только начинаешь, всё получится!
         </p>
       </div>
       <div class="topics-image fourth-order">
-        <img src="/assets/features-screen.png" alt="Topics" />
+        <img src="/assets/features-lessons.png" alt="Topics" />
       </div>
 
       <div class="topics-image fifth-order">
-        <img src="/assets/features-screen.png" alt="Topics" />
+        <img src="/assets/features-quiz.png" alt="Topics" />
       </div>
       <div class="topics-text sixth-order">
-        <h2 class="classic-heading">Hundreds of Topics</h2>
+        <h2 class="classic-heading">Викторины на каждый урок</h2>
         <p class="classic-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-          facere incidunt, repellat dolorem nobis sapiente velit! Officiis
-          culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex
-          excepturi minima vel quidem!
+          К каждому уроку у нас есть викторины и всякие интерактивные штуки,
+          чтобы учёба была не скучной. Наши тесты и игры помогут проверить,
+          насколько ты понял материал, и сделать процесс обучения реально
+          интересным. Это отличный способ учиться, играя и узнавая новое!
         </p>
       </div>
 
       <div class="topics-text seventh-order">
-        <h2 class="classic-heading">Hundreds of Topics</h2>
+        <h2 class="classic-heading">Зарабатывай и строй</h2>
         <p class="classic-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-          facere incidunt, repellat dolorem nobis sapiente velit! Officiis
-          culpa, maiores ipsa, dolore eligendi reiciendis praesentium nam ex
-          excepturi minima vel quidem!
+          В нашем приложении ты зарабатываешь валюту, проходя уроки и выполняя
+          задания. Эти деньги можно тратить на покупку островов и других крутых
+          бонусов, что делает обучение ещё более увлекательным и мотивирующим.
         </p>
       </div>
       <div class="topics-image eighth-order">
-        <img src="/assets/features-screen.png" alt="Topics" />
+        <img src="/assets/features-islands.png" alt="Topics" />
       </div>
     </div>
   </section>
@@ -111,6 +134,14 @@ import IslandContainer from "./IslandContainer.vue";
 export default {
   components: {
     IslandContainer,
+  },
+  methods: {
+    scrollToWidgets() {
+      const section = document.getElementById("widgets-section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    },
   },
 };
 </script>
@@ -132,6 +163,7 @@ export default {
 
 .hero-content {
   margin-bottom: 20vh;
+  margin-top: 2vh;
   transform: translateY(-10%);
   width: 100%;
 }
@@ -228,6 +260,7 @@ export default {
   font-size: 1.2rem;
   color: #333;
   text-align: center;
+  margin-top: 15px;
 }
 
 .problem-statement-image,
@@ -256,9 +289,9 @@ export default {
   background: rgb(0, 36, 125);
   background: linear-gradient(
     1600deg,
-    rgba(0, 36, 125, 1) 0%,
-    rgba(25, 98, 216, 1) 26%,
-    rgba(64, 152, 255, 1) 94%
+    rgb(22, 58, 150) 0%,
+    rgb(75, 137, 237) 26%,
+    rgb(93, 150, 216) 94%
   );
 }
 
@@ -273,19 +306,18 @@ export default {
 
 .widget {
   background: #ffffff;
-  padding: 2vw;
+  /* padding: 0.5vw; */
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.one {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.two {
-  grid-column: 2;
-  grid-row: 2;
+.widget img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  object-position: center;
 }
 
 .square {
