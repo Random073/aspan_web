@@ -148,6 +148,13 @@ export default {
 
 <style scoped>
 /* Islands */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/assets/fonts/SFProDisplay-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -159,6 +166,15 @@ export default {
   text-align: center;
   z-index: 1;
   background: transparent;
+  font-family:
+    "SF Pro Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-weight: bold;
 }
 
 .hero-content {
