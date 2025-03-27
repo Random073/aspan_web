@@ -251,7 +251,7 @@ export default {
 
   /* Lesson boxes */
   .path-item {
-    min-width: 160px; /* Slightly smaller box */
+    max-width: 160px; /* Slightly smaller box */
     padding: 15px 10px;
   }
 
