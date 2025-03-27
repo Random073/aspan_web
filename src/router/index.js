@@ -27,6 +27,9 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory("/aspan_web"),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }; // Ensures the page scrolls to the top on navigation
+  },
 });
 
 export default router;
