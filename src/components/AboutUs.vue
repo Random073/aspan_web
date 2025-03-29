@@ -514,7 +514,7 @@ export default {
     padding: 10px;
     text-align: center;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 0;
+    border-radius: 30;
   }
   .team-photo {
     margin-bottom: 5px;
