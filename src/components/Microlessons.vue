@@ -110,20 +110,20 @@ export default {
   margin: 0 auto;
   padding: 30px 20px;
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #1261d8;
 }
 
 /* Main heading and subtitle */
 .main-heading {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 .main-subtitle {
-  font-size: 18px;
+  font-size: 26px;
   margin-bottom: 40px;
-  color: #666;
+  color: #526ea1;
 }
 
 /* Each learning path section */
@@ -152,22 +152,23 @@ export default {
 }
 
 .path-title {
-  font-size: 24px;
+  font-size: 30px;
   margin: 0;
 }
 
 .path-subtitle {
-  font-size: 16px;
+  font-size: 20px;
   margin: 4px 0 0;
-  color: #666;
+  color: #526ea1;
 }
 
 /* Grey rectangular smooth area container */
 .path-items-container {
-  background-color: #f0f0f0;
+  background-color: #e2f0ff8b;
   border-radius: 15px;
   padding: 20px;
   overflow-x: auto;
+  min-height: 350px;
 }
 
 /* Horizontal scroll container for items */
@@ -178,9 +179,9 @@ export default {
 
 /* Individual lesson/topic box */
 .path-item {
-  min-width: 200px;
+  min-width: 300px;
+  min-height: 300px;
   background: #fff;
-  border: 1px solid #eee;
   border-radius: 8px;
   flex-shrink: 0;
   text-align: center;
@@ -192,15 +193,15 @@ export default {
    a fixed height is used to crop the image, and object-fit ensures it covers the space */
 .item-icon {
   width: 100%;
-  height: 150px;
+  height: 250px;
   object-fit: cover;
 }
 
 /* Title of the lesson */
 .item-title {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
-  color: #444;
+  color: #194883;
   margin: 10px 0;
   padding: 0 5px;
 }
