@@ -1,68 +1,70 @@
 <template>
-  <div class="learning-paths-container">
-    <!-- Main heading and subtitle -->
-    <h1 class="main-heading">Микроуроки</h1>
-    <p class="main-subtitle">Выберите свой путь к знаниям</p>
+  <div class="whole-page">
+    <div class="learning-paths-container">
+      <!-- Main heading and subtitle -->
+      <h1 class="main-heading">Микроуроки</h1>
+      <p class="main-subtitle">Выберите свой путь к знаниям</p>
 
-    <!-- Космос Section -->
-    <section class="path-section">
-      <!-- Section header -->
-      <div class="path-header">
-        <div class="path-header-icon">
-          <img :src="getImageUrl('space-icon.png')" alt="Space Icon" />
-        </div>
-        <div class="path-header-text">
-          <h2 class="path-title">Космос</h2>
-          <p class="path-subtitle">Изучайте тайны вселенной</p>
-        </div>
-      </div>
-      <!-- Grey rectangular smooth area for lesson boxes -->
-      <div class="path-items-container">
-        <div class="path-items">
-          <div
-            v-for="(lesson, index) in spaceLessons"
-            :key="index"
-            class="path-item"
-          >
-            <img
-              :src="getImageUrl(lesson.icon)"
-              :alt="lesson.title"
-              class="item-icon"
-            />
-            <p class="item-title">{{ lesson.title }}</p>
+      <!-- Космос Section -->
+      <section class="path-section">
+        <!-- Section header -->
+        <div class="path-header">
+          <div class="path-header-icon">
+            <img :src="getImageUrl('space-icon.png')" alt="Space Icon" />
+          </div>
+          <div class="path-header-text">
+            <h2 class="path-title">Космос</h2>
+            <p class="path-subtitle">Изучайте тайны вселенной</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Налоги Section -->
-    <section class="path-section">
-      <div class="path-header">
-        <div class="path-header-icon">
-          <img :src="getImageUrl('finances-icon.png')" alt="Taxes Icon" />
-        </div>
-        <div class="path-header-text">
-          <h2 class="path-title">Налоги</h2>
-          <p class="path-subtitle">Откройте мир финансовых отношений</p>
-        </div>
-      </div>
-      <div class="path-items-container">
-        <div class="path-items">
-          <div
-            v-for="(lesson, index) in taxesLessons"
-            :key="index"
-            class="path-item"
-          >
-            <img
-              :src="getImageUrl(lesson.icon)"
-              :alt="lesson.title"
-              class="item-icon"
-            />
-            <p class="item-title">{{ lesson.title }}</p>
+        <!-- Grey rectangular smooth area for lesson boxes -->
+        <div class="path-items-container">
+          <div class="path-items">
+            <div
+              v-for="(lesson, index) in spaceLessons"
+              :key="index"
+              class="path-item"
+            >
+              <img
+                :src="getImageUrl(lesson.icon)"
+                :alt="lesson.title"
+                class="item-icon"
+              />
+              <p class="item-title">{{ lesson.title }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Налоги Section -->
+      <section class="path-section">
+        <div class="path-header">
+          <div class="path-header-icon">
+            <img :src="getImageUrl('finances-icon.png')" alt="Taxes Icon" />
+          </div>
+          <div class="path-header-text">
+            <h2 class="path-title">Налоги</h2>
+            <p class="path-subtitle">Откройте мир финансовых отношений</p>
+          </div>
+        </div>
+        <div class="path-items-container">
+          <div class="path-items">
+            <div
+              v-for="(lesson, index) in taxesLessons"
+              :key="index"
+              class="path-item"
+            >
+              <img
+                :src="getImageUrl(lesson.icon)"
+                :alt="lesson.title"
+                class="item-icon"
+              />
+              <p class="item-title">{{ lesson.title }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -104,6 +106,9 @@ export default {
 </script>
 
 <style scoped>
+.whole-page {
+  background-color: #f6faff;
+}
 /* Container for the entire page */
 .learning-paths-container {
   max-width: 1200px;
@@ -164,7 +169,7 @@ export default {
 
 /* Grey rectangular smooth area container */
 .path-items-container {
-  background-color: #e2f0ff8b;
+  background-color: #e2ecff;
   border-radius: 15px;
   padding: 20px;
   overflow-x: auto;

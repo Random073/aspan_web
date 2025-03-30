@@ -4,9 +4,15 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-   base: "/aspan_web/",
-   plugins: [
-      vue(),
-      tailwindcss()
-   ],
+  base: "/aspan_web/",
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag === "model-viewer",
+        },
+      },
+    }),
+    tailwindcss(),
+  ],
 });
