@@ -1,522 +1,388 @@
 <template>
-  <h1><strong>Privacy Policy for ASpan</strong></h1>
+  <h1>Политика конфиденциальности ASpan</h1>
 
-  <p><strong>Effective Date:</strong> 03.02.2025</p>
-  <p><strong>Last Updated:</strong> 03.02.2025</p>
   <p>
-    <strong>Welcome to ASpan.</strong> ASpan is a non-profit educational
-    platform (available as a mobile app and via a promotional website) dedicated
-    to protecting your privacy. This Privacy Policy explains how we collect,
-    use, store, and protect your personal information when you use ASpan (“the
-    platform,” “we,” “us,” or “our”). We are committed to complying with
-    applicable privacy laws and regulations, including those designed to protect
-    children under 16 (such as the EU General Data Protection Regulation’s
-    provisions for children (GDPR-K) and the U.S. Children’s Online Privacy
-    Protection Act (COPPA)). By using ASpan, you agree to the practices
-    described in this Privacy Policy.
+    <strong>Дата вступления в силу: 30.03.2025</strong>
   </p>
   <p>
-    <strong>Note for Minors:</strong> If you are under 16 years old, please
-    review this Policy with a parent or guardian. ASpan does not knowingly
-    collect personal information from children under 13 without parental
-    consent, and by using ASpan you confirm that you are at least 16 years old
-    or have your parent/guardian’s permission to use the platform and provide
-    your personal data.
+    <strong>Последнее обновление: 30.03.2025</strong>
   </p>
-  <h2><strong>1. Information We Collect</strong></h2>
-
+  <p></p>
   <p>
-    We <strong>collect only the minimum personal data necessary</strong> to
-    create and manage your ASpan account and improve your learning experience.
-    This includes:
-  </p>
-  <ul>
-    <li>
-      <strong>Username:</strong> A display name or nickname you provide when
-      creating an account.
-    </li>
-
-    <li>
-      <strong>Email Address:</strong> Used for account verification, login, and
-      essential communications (e.g. password resets or important service
-      updates).
-    </li>
-
-    <li>
-      <strong>Password:</strong> A password you choose to secure your account.
-      <em
-        >For your safety, passwords are stored in a secure, hashed form and
-        <strong>not</strong> in plain text.</em
-      >
-    </li>
-
-    <li>
-      <strong>Last Activity Date:</strong> A timestamp or date of your last
-      activity or login on the platform. This is collected automatically to help
-      us understand platform usage and manage inactive accounts.
-    </li>
-  </ul>
-  <p>
-    All personal data is stored securely in our
-    <strong>AppWrite database</strong>, which is a cloud-based data storage
-    service. We do <strong>not</strong> collect any sensitive personal
-    information such as physical addresses, phone numbers, payment details, or
-    government IDs. We also do not collect any unnecessary data from your device
-    – for example, we <strong>do not track</strong> your precise location,
-    contacts, or device identifiers beyond what is needed for the basic
-    functioning of the service.
-  </p>
-  <h2><strong>2. How We Use Your Information</strong></h2>
-
-  <p>
-    We use the collected information
+    Добро пожаловать в ASpan. ASpan – это некоммерческая образовательная
+    платформа (доступная в виде мобильного приложения и промо-сайта), которая
+    стремится защищать вашу конфиденциальность. Настоящая
+    <strong>Политика конфиденциальности </strong>объясняет, какие данные мы
+    собираем, как мы их используем, храним и защищаем при использовании ASpan
+    (далее – «платформа», «мы», «нас» или «наш»). Мы строго соблюдаем
+    действующие законы о защите данных, включая
     <strong
-      >solely to provide and improve the ASpan educational service.</strong
+      >Общий регламент ЕС по защите данных (GDPR-K) для детей и Закон США о
+      защите конфиденциальности детей в Интернете (COPPA).</strong
     >
-    Specifically, your information is used to:
-  </p>
-  <ul>
-    <li>
-      <strong>Create and Manage Your Account:</strong> We use your username,
-      email, and password to set up your account, authenticate your login, and
-      allow you to use the app’s features (such as saving progress or
-      preferences).
-    </li>
-
-    <li>
-      <strong>Provide the Educational Services:</strong> Your data allows us to
-      deliver personalized content (if applicable) and keep track of your
-      activity (using the last activity date) so that you can continue where you
-      left off and we can ensure the platform is functioning properly for you.
-    </li>
-
-    <li>
-      <strong>Communicate with You:</strong> We may send you
-      <strong>essential communications</strong> related to the service. For
-      example, we might send a verification email when you register, an email to
-      reset your password if you request it, or to inform you of important
-      updates like changes to this Privacy Policy. We will
-      <strong>not</strong> send you marketing or promotional emails, and there
-      are <strong>no advertisements</strong> within the app.
-    </li>
-
-    <li>
-      <strong>Improve and Maintain Our Platform:</strong> Aggregated data such
-      as usage statistics (e.g., how many users are active, using the last
-      activity date) may be used to help us understand user engagement and
-      improve ASpan’s features or performance. This data is
-      <strong>not</strong> personally identifying beyond the purposes above, and
-      it is used internally by our team to make the app better for users.
-    </li>
-  </ul>
-  <p>
-    <strong>Non-Profit, No Monetization:</strong> ASpan is strictly a non-profit
-    initiative. There are
-    <strong>no in-app purchases, no subscription fees, and no ads</strong> on
-    our platform. This means
-    <strong>we do not monetize your personal information</strong> in any way. We
-    do not use your data for advertising, nor do we profile you for marketing
-    purposes. All usage of your data is solely to serve you as an educational
-    tool.
-  </p>
-  <h2><strong>3. Disclosure of Information to Third Parties</strong></h2>
-
-  <p>
-    Your privacy is extremely important to us. We treat your personal data as
-    confidential and
-    <strong
-      >do not share, sell, or rent your personal information to any third
-      parties</strong
-    >
-    for their own marketing or other purposes. In other words,
-    <strong
-      >no one outside of ASpan’s operation will receive your personal
-      data</strong
-    >
-    for independent use.
-  </p>
-  <p>The only circumstances under which we might disclose user data are:</p>
-  <ul>
-    <li>
-      <strong>Service Providers (Processors):</strong> ASpan uses certain
-      trusted service providers to operate the platform – most notably, our
-      AppWrite cloud database service where your data is stored. In such cases,
-      the service provider is
-      <strong>acting under our direction and on our behalf</strong>. They are
-      <strong>not allowed to use your information for any other purpose</strong>
-      except to store or process it for us, and they are bound by strict
-      confidentiality and data protection obligations. Aside from these
-      infrastructure providers, we currently do not use any analytics services,
-      advertising networks, or other third-party tools that would require access
-      to your personal data.
-    </li>
-
-    <li>
-      <strong>Legal Requirements:</strong> We may disclose information if
-      required to do so by law or in response to a valid legal request (e.g., a
-      court order, subpoena, or government demand) or to protect the rights,
-      property, or safety of ASpan, our users, or the public. For instance, if
-      we are obliged to cooperate with law enforcement or regulatory
-      authorities, we will only provide the minimum necessary information and
-      only when legally compelled.
-    </li>
-
-    <li>
-      <strong>Business Transfer:</strong> Since ASpan is non-profit and not a
-      commercial enterprise, a sale or merger is unlikely. However, if there
-      were ever a situation where ASpan’s ownership or structure changes (for
-      example, if it is transferred to a non-profit educational organization or
-      combined with another project), user data might be transferred to the new
-      owner/organization. If that happens, we will ensure the same level of
-      privacy protection is maintained and inform users of any changes.
-    </li>
-  </ul>
-  <p>
-    Aside from the above scenarios,
-    <strong>no other sharing of data occurs.</strong> Specifically, we do not
-    share user information with advertisers, data brokers, or unrelated third
-    parties. Your data stays within the ASpan ecosystem, used only by those who
-    need it to operate and improve the service in line with this Policy.
-  </p>
-  <h2><strong>4. Data Storage and International Transfers</strong></h2>
-
-  <p>
-    All personal data collected through ASpan is stored in our
-    <strong>AppWrite database</strong>, which is a secure cloud-based datastore.
-    Because cloud services can involve servers located in various countries,
-    your data
-    <strong
-      >may be stored and processed on servers outside of your home
-      country</strong
-    >. In fact,
-    <strong>data storage and processing may occur internationally</strong>,
-    including (potentially) in countries that have different data protection
-    laws than your country of residence.
+    Используя ASpan, вы соглашаетесь с практиками, описанными в данной Политике
+    конфиденциальности.
   </p>
   <p>
-    We understand that international data transfers require careful handling
-    under privacy laws like the GDPR.
-    <strong
-      >No matter where your data is processed, we will protect it under the
-      terms of this Privacy Policy and applicable law.</strong
-    >
-    If you are located in the European Economic Area (EEA) or another region
-    with data transfer restrictions, we take appropriate safeguards to ensure
-    that your personal information remains protected according to EU standards.
-    These safeguards may include measures such as
-    <strong>standard contractual clauses</strong> or ensuring our service
-    providers (like AppWrite) are certified under frameworks that ensure
-    adequate data protection. By using ASpan, you acknowledge that your
-    information may be transferred to facilities located in other countries, and
-    you <strong>consent to such international transfer</strong> for the purposes
-    of storage and processing as described here.
+    Примечание для несовершеннолетних: Если вам меньше 16 лет, пожалуйста,
+    ознакомьтесь с этой Политикой вместе с родителем или опекуном. Используя
+    ASpan, вы подтверждаете, что вам уже исполнилось 16 лет или что у вас есть
+    разрешение родителя/опекуна на использование платформы и предоставление
+    персональных данных.
   </p>
-  <p>
-    We retain your personal data on our servers
-    <strong>only for as long as necessary</strong> to fulfill the purposes
-    outlined in this Policy. In practice, this means we will keep your data
-    while your ASpan account is active. If you choose to delete your account (or
-    request us to delete your data), or if your account becomes inactive for an
-    extended period, we will remove or anonymize your personal information from
-    our active databases, subject to our backup procedures and legal obligations
-    (see Section 7 on <strong>Your Rights</strong> and Section 8 on
-    <strong>Data Security</strong> for more on deletion).
-  </p>
-  <h2><strong>5. Data Security Measures</strong></h2>
+  <h2>1. Какие данные мы собираем</h2>
 
   <p>
-    <strong>Protecting your data is our priority.</strong> We implement
-    industry-standard security measures to safeguard your personal information
-    against unauthorized access, alteration, disclosure, or destruction. Some of
-    the key security practices and technologies we use include:
-  </p>
-  <ul>
-    <li>
-      <strong>Encryption:</strong> All communication between your app/browser
-      and our servers is encrypted using HTTPS/TLS protocols. This means that
-      data (such as your login credentials) is protected in transit and cannot
-      be easily intercepted. Additionally, where possible, we utilize encryption
-      at rest for stored data in the AppWrite database. For example, sensitive
-      fields like passwords are stored using strong one-way cryptographic
-      hashing so that they cannot be read or recovered in plain text.
-    </li>
-
-    <li>
-      <strong>Access Controls:</strong> We restrict access to personal data
-      strictly to authorized personnel who need it to operate or maintain the
-      service. The AppWrite platform provides robust authentication and
-      permission systems, ensuring that each user can only access their own data
-      and that our administrators can only access what is necessary for
-      maintenance tasks. We use role-based access controls so that no one can
-      access user data unless it is required for their job function.
-    </li>
-
-    <li>
-      <strong>Secure Infrastructure:</strong> Our AppWrite database and servers
-      are protected by firewalls and regular security monitoring. We apply
-      security patches and updates to our software and infrastructure promptly
-      to mitigate risks. AppWrite itself is built with security in mind,
-      employing measures such as rate limiting (to prevent brute-force attacks)
-      and audit logging of significant events.
-    </li>
-
-    <li>
-      <strong>No Third-Party Exposure:</strong> Because we do not integrate
-      external analytics or advertising services, your data isn’t being
-      transmitted to third-party networks during normal use of the app. This
-      reduces potential vectors for data leaks.
-    </li>
-
-    <li>
-      <strong>Employee and Contractor Obligations:</strong> (If applicable) Any
-      team members or volunteers who help operate ASpan are trained on the
-      importance of privacy and are contractually bound to protect user data.
-      They must follow strict guidelines and are subject to disciplinary
-      measures if they fail to meet our data protection standards.
-    </li>
-  </ul>
-  <p>
-    While we strive to use commercially acceptable means to protect your
-    personal information,
-    <strong
-      >no method of transmission over the internet or method of electronic
-      storage is 100% secure</strong
-    >. Therefore, we cannot guarantee absolute security. However, we
-    continuously review and enhance our security practices to keep your data as
-    safe as possible. If there is ever any indication of a data breach that
-    affects your personal information, we will notify you and the appropriate
-    authorities as required by law.
-  </p>
-  <h2><strong>6. Your Rights and Choices</strong></h2>
-
-  <p>
-    We believe you should have control over your personal data. Subject to
-    applicable laws, you have the following
-    <strong>rights regarding your information</strong> on ASpan:
-  </p>
-  <ul>
-    <li>
-      <strong>Access Your Data:</strong> You have the right to request a copy of
-      the personal data we hold about you. We can provide you with a summary of
-      your username, email, and any other associated information (such as last
-      activity date) upon request.
-    </li>
-
-    <li>
-      <strong>Rectification (Correcting Your Data):</strong> If any personal
-      information we have is incorrect or outdated (for example, if you need to
-      update your email address), you have the right to correct it. You can
-      update certain information through your account profile (if such an option
-      is available) or by contacting us to request changes.
-    </li>
-
-    <li>
-      <strong>Deletion (Right to be Forgotten):</strong> You have the right to
-      request deletion of your personal data. This can be done by deleting your
-      account through the app (if that feature exists) or by contacting us
-      directly with a deletion request. Once we verify your identity and
-      ownership of the account, we will delete or anonymize your personal data
-      from our systems. Please note that we might retain certain minimal
-      information if necessary for legal compliance or internal security (for
-      example, we may keep a record that an email belonged to a deleted account
-      to prevent fraud or re-use of the account inappropriately), but we will
-      inform you if any such retention is required.
-    </li>
-
-    <li>
-      <strong>Data Portability:</strong> For users in some jurisdictions (such
-      as the EU under GDPR), you may have the right to request your personal
-      data in a common portable format. Upon request, we can provide your basic
-      account data in a machine-readable format.
-    </li>
-
-    <li>
-      <strong>Restriction or Objection to Processing:</strong> In certain
-      circumstances, you may have the right to object to or ask us to limit
-      (restrict) the processing of your data. For example, if you believe the
-      data is inaccurate or our processing is unlawful, you can request limited
-      use until the issue is resolved. Since ASpan only processes your data to
-      provide our non-profit service, if you object to us processing necessary
-      data (like your email or password), it may require that you discontinue
-      use of the service. We will inform you of any implications if you seek to
-      exercise this right.
-    </li>
-
-    <li>
-      <strong>Withdraw Consent:</strong> In the unusual case where we rely on
-      your consent to process any personal data (for instance, if we ever ask
-      for permission for a new feature), you have the right to withdraw that
-      consent at any time. Withdrawal of consent will not affect the legality of
-      any processing we carried out prior to your withdrawal. (Note: Currently,
-      ASpan does not base its data processing on consent but rather on the need
-      to provide the service, except for your acceptance of this Privacy Policy
-      and Terms of Use by using the platform.)
-    </li>
-  </ul>
-  <p>
-    <strong>How to Exercise Your Rights:</strong> You can exercise these rights
-    at any time by contacting us (see the <strong>Contact Us</strong> section at
-    the end of this Policy). For certain requests like data access, we may need
-    to verify your identity to ensure we’re providing information to the correct
-    person. We will respond to your request within a reasonable timeframe and in
-    accordance with applicable law (typically within 30 days for most requests).
-    There is no cost for exercising your rights, though if a request is
-    manifestly unfounded or excessive (for example, repetitive requests), we may
-    charge a reasonable fee or refuse to act on it as permitted by law.
+    Мы собираем <strong>минимум</strong> данных, необходимых для работы
+    платформы и улучшения пользовательского опыта. Они включают в себя:
   </p>
   <p>
-    Please note, if you delete your data or object to necessary processing,
-    <strong>your ability to use ASpan may be impacted</strong>. We’ll always
-    explain the consequences of honoring your request (for example, that
-    deleting your account will remove access to your saved progress).
+    • <strong>Имя пользователя (никнейм) </strong>– отображаемое имя, которое вы
+    указываете при создании учетной записи.
   </p>
   <p>
-    Finally, if you have concerns about how we handle your data, you also have
-    the right to lodge a complaint with a data protection authority or
-    regulatory body in your country. We encourage you to contact us first so we
-    can address your concerns directly.
+    • <strong>Адрес электронной почты</strong> – используется для входа в
+    систему
   </p>
-  <h2><strong>7. Children’s Privacy (Users Under 16)</strong></h2>
-
   <p>
-    Protecting the privacy of young users is especially important to us. ASpan
-    is intended for a general audience of learners and is
-    <strong>not directed primarily at children under the age of 13</strong>. We
-    recognize the need to provide further privacy protections for minors under
-    16 years old, in line with GDPR-K and COPPA.
-  </p>
-  <ul>
-    <li>
-      <strong>No Sign-Ups Under 13:</strong> We do
-      <strong
-        >not knowingly collect or solicit personal information from children
-        under 13 years of age</strong
-      >. If you are under 13, please do not register an account or send any
-      personal information to us. If we discover that we have collected personal
-      data from a child under 13 without verifiable parental consent, we will
-      delete that information as quickly as possible.
-    </li>
-
-    <li>
-      <strong>Parental Guidance for Ages 13–16:</strong> If you are between 13
-      and 16 years old, you should only use ASpan with the involvement and
-      consent of a parent or legal guardian. While we currently do
-      <strong>not have a formal process to obtain parental consent</strong>
-      during registration, by using our platform we presume that you have
-      obtained permission from your parent or guardian to use ASpan and that
-      they have reviewed and agreed to this Privacy Policy. We encourage
-      parents/guardians of minors using ASpan to supervise their child’s use of
-      the platform and educate them about safe online practices.
-    </li>
-
-    <li>
-      <strong>Parental Rights:</strong> If you are a parent or guardian and you
-      believe we have collected personal information from your child under 16
-      without appropriate consent, please contact us immediately. We will work
-      with you to review, update, or delete the child’s information as required.
-      Parents (especially of children under 13) have the right under COPPA to
-      request the removal of their child’s personal data from our records. We
-      will gladly honor such requests and confirm once the data has been
-      deleted.
-    </li>
-
-    <li>
-      <strong>Educational Context:</strong> If ASpan is ever used in a school or
-      educational setting involving students under 16, we expect that the school
-      or educator has obtained any necessary parental consents or is acting as
-      the agent for the parent (consistent with COPPA’s “school official
-      exception”). Regardless, our policy remains not to share or use students’
-      personal data for any commercial purposes.
-    </li>
-  </ul>
-  <p>
-    By using ASpan, users under 16 acknowledge that they understand the
-    importance of privacy and have either reached the age of 16 or have the
-    consent and guidance of a parent/guardian. We are committed to complying
-    with all applicable laws regarding children’s privacy and will update our
-    practices as needed to remain in compliance.
-  </p>
-  <h2><strong>8. Changes to This Privacy Policy</strong></h2>
-
-  <p>
-    We may update or modify this Privacy Policy from time to time to reflect
-    changes in our practices, ensure ongoing compliance with relevant laws, or
-    for other operational, legal, or regulatory reasons. When we make changes,
-    we will do the following:
-  </p>
-  <ul>
-    <li>
-      <strong>Notification of Changes:</strong> We will post the updated Privacy
-      Policy on our website (and within the app, if applicable) with a new
-      <strong>“Last Updated”</strong> date. If changes are significant, we will
-      provide a more prominent notice or
-      <strong>notify you directly</strong> (for example, by email to the address
-      associated with your account or by an in-app message).
-    </li>
-
-    <li>
-      <strong>Consent to Changes:</strong> If you continue to use ASpan after a
-      Privacy Policy update takes effect, you will be deemed to have accepted
-      the revised policy. However, if any change requires separate consent by
-      law (for example, if in the future we were to collect additional data or
-      use it for new purposes that require consent), we will obtain that consent
-      from you.
-    </li>
-
-    <li>
-      <strong>Review and Stay Informed:</strong> We encourage you to
-      periodically review this Privacy Policy to stay informed about how we are
-      protecting your information. The latest version of the Privacy Policy will
-      always be available on our website. Past versions can be requested if you
-      wish to see how the policy has evolved.
-    </li>
-  </ul>
-  <p>
-    If you do not agree with any updates to the Privacy Policy, you should stop
-    using ASpan and may request that your data be deleted (see
-    <strong>Your Rights</strong> above). We will not enforce material changes to
-    this Privacy Policy retroactively without your express consent.
-  </p>
-  <h2><strong>9. Contact Information</strong></h2>
-
-  <p>
-    We welcome any questions, concerns, or feedback you may have about your
-    privacy or this Policy. If you need to contact us for any reason – whether
-    it’s to exercise your rights, report a potential issue, or simply ask a
-    question about how your information is handled – please reach out to us:
-  </p>
-  <ul>
-    <li><strong>Email:</strong> [Privacy Contact Email Placeholder]</li>
-
-    <li><strong>Mailing Address:</strong> [Legal Address Placeholder]</li>
-  </ul>
-  <p>
+    • <strong>Пароль</strong> – для безопасности и уникальности вашей учетной
+    записи.
     <em
-      >(We are in the process of establishing our official contact channels.
-      Please use the above placeholder contact information for now – these will
-      be updated once our official contact email and legal address are
-      finalized.)</em
+      >Для вашей безопасности пароли хранятся в зашифрованном виде с
+      использованием механизмов защиты базы данных Appwrite и не доступны в
+      открытом виде.
+    </em>
+  </p>
+  <p>
+    • <strong>Дата последнего завершения урока </strong>– фиксируется
+    автоматически для правильной работы логики серий (streak)
+  </p>
+  <p>Мы <strong>НЕ собираем:</strong></p>
+  <p>• Реальные имена, возраст, пол</p>
+  <p>• Домашний адрес, номер телефона</p>
+  <p>• Платежные данные</p>
+  <p>• Геолокацию, контакты или другие данные устройства</p>
+  <p>
+    Все персональные данные хранятся в
+    <strong>безопасной облачной базе данных AppWrite</strong>.
+  </p>
+  <h2>2. Как мы используем ваши данные</h2>
+
+  <p>
+    Мы используем собранные данные <strong>только</strong> для предоставления
+    образовательных услуг и не передаем их третьим лицам.
+  </p>
+  <p>
+    <strong>Основные цели использования данных:</strong>
+  </p>
+  <p>
+    <strong> • Создание и управление учетной записью</strong>
+  </p>
+  <p>
+    <strong> • Обеспечение работы платформы </strong>(сохранение прогресса,
+    отслеживание активности для внутренней логики)
+  </p>
+  <p>
+    <strong> • Улучшение сервиса </strong>(анализ анонимных данных для улучшения
+    контента)
+  </p>
+  <p>
+    <strong>Отсутствие монетизации. </strong>ASpan – это
+    <strong>некоммерческий проект. </strong>В приложении
+    <strong>нет рекламы, платных подписок или встроенных покупок. </strong>Мы
+    <strong>не продаем и не передаем</strong> личные данные пользователей
+    третьим лицам.
+  </p>
+  <h2>3. Передача данных третьим лицам</h2>
+
+  <p>
+    Ваша конфиденциальность очень важна для нас. Мы
+    <strong>не передаем и не продаем</strong> личные данные пользователей
+    сторонним организациям. Другими словами, никто за пределами ASpan не получит
+    ваши персональные данные для самостоятельного использования.
+  </p>
+  <p>
+    <strong>Данные могут передаваться только в следующих случаях:</strong>
+  </p>
+  <p>
+    • <strong>Поставщики услуг (обработчики данных) </strong> – ASpan использует
+    проверенных поставщиков услуг для обеспечения работы платформы – в
+    частности, облачную базу данных AppWrite, где хранятся ваши данные. В этих
+    случаях поставщик услуг действует по нашему поручению и под нашим контролем.
+    Он не имеет права использовать вашу информацию для каких-либо других целей,
+    кроме хранения и обработки данных для нас, и связан строгими обязательствами
+    по конфиденциальности и защите данных. Помимо этих инфраструктурных
+    провайдеров, в настоящее время мы не используем сервисы аналитики, рекламные
+    сети или другие сторонние инструменты, требующие доступа к вашим
+    персональным данным.
+  </p>
+  <p>
+    • <strong>Правовые требования</strong> – Мы можем раскрыть информацию, если
+    это необходимо в соответствии с законом или по требованию государственных
+    органов (например, по постановлению суда, повестке или запросу от
+    правоохранительных органов), а также для защиты прав, собственности или
+    безопасности ASpan, наших пользователей или общества. В случае необходимости
+    сотрудничества с правоохранительными или регулирующими органами мы будем
+    предоставлять только минимально необходимую информацию и только в случае
+    законного требования.
+  </p>
+  <p>
+    • <strong>Изменение управления платформой </strong>– Поскольку ASpan
+    является некоммерческим проектом, продажа или слияние маловероятны. Однако в
+    случае изменения владельца или структуры (например, передачи проекта
+    некоммерческой образовательной организации или объединения с другим
+    проектом) пользовательские данные могут быть переданы новому владельцу или
+    организации. В таком случае мы гарантируем сохранение уровня
+    конфиденциальности и уведомим пользователей о любых изменениях.
+  </p>
+  <p>
+    Помимо вышеуказанных случаев,
+    <strong>никакая другая передача данных не осуществляется</strong>. В
+    частности, мы не передаем информацию о пользователях рекламодателям,
+    брокерам данных или сторонним организациям, не связанным с ASpan. Ваши
+    данные остаются внутри экосистемы ASpan и используются только теми, кому это
+    необходимо для работы и улучшения сервиса в соответствии с данной Политикой.
+  </p>
+  <h2>4. Хранение и передача данных</h2>
+
+  <p>
+    Все персональные данные, собранные через ASpan, хранятся в нашей облачной
+    базе данных AppWrite, которая обеспечивает высокий уровень безопасности.
+    Поскольку облачные сервисы могут использовать серверы в разных странах, ваши
+    данные могут храниться и обрабатываться за пределами вашей страны.
+    Фактически, обработка данных может происходить на международном уровне,
+    включая (возможные) страны с другими законами о защите данных, чем в вашей
+    стране проживания.
+  </p>
+  <p>
+    Мы понимаем, что международные передачи данных требуют особого внимания в
+    соответствии с законами о конфиденциальности, такими как GDPR. Независимо от
+    того, где обрабатываются ваши данные, мы защищаем их в соответствии с
+    условиями данной Политики конфиденциальности и применимыми законами. Если вы
+    находитесь в Европейской экономической зоне (EEA) или другом регионе с
+    ограничениями на передачу данных, мы принимаем соответствующие меры для
+    обеспечения защиты вашей информации в соответствии с европейскими
+    стандартами. Эти меры могут включать использование стандартных договорных
+    положений или выбор поставщиков услуг (таких как AppWrite),
+    сертифицированных в рамках механизмов, обеспечивающих адекватный уровень
+    защиты данных. Используя ASpan, вы признаете, что ваши данные могут
+    передаваться в другие страны и даете согласие на такую международную
+    передачу для целей хранения и обработки, описанных здесь.
+  </p>
+  <p>
+    Мы храним ваши персональные данные на наших серверах только в течение
+    времени, необходимого для выполнения целей, указанных в данной Политике. На
+    практике это означает, что мы сохраняем ваши данные, пока ваша учетная
+    запись ASpan активна. Если вы решите удалить свою учетную запись (или
+    запросите удаление данных) или если ваша учетная запись будет неактивной в
+    течение длительного времени, мы удалим или анонимизируем ваши персональные
+    данные из наших активных баз данных, за исключением случаев, когда их
+    хранение необходимо в рамках резервного копирования или выполнения
+    юридических обязательств (см. Раздел 7 «Ваши права» и Раздел 8 «Безопасность
+    данных» для получения дополнительной информации об удалении).
+  </p>
+  <h2>5. Безопасность данных</h2>
+
+  <p>
+    Защита вашей информации — наш приоритет. Мы используем современные меры
+    безопасности для предотвращения несанкционированного доступа, изменения,
+    раскрытия или уничтожения ваших данных.
+  </p>
+  <p>
+    Шифрование: Пароли пользователей хранятся в зашифрованном виде с
+    использованием встроенных механизмов безопасности платформы AppWrite.
+    Передача данных осуществляется через платформу AppWrite, которая использует
+    встроенные механизмы безопасности для защиты информации пользователей.
+  </p>
+  <p>
+    Контроль доступа: Доступ к персональной информации ограничен. Каждый
+    пользователь может видеть только свои данные, а система AppWrite
+    обеспечивает строгие механизмы аутентификации и управления правами доступа.
+  </p>
+  <p>
+    Безопасная инфраструктура: Серверы и база данных защищены брандмауэрами и
+    постоянным мониторингом. AppWrite использует механизмы защиты, такие как
+    ограничение частоты запросов (чтобы предотвратить подбор паролей) и аудит
+    значимых событий.
+  </p>
+  <p>
+    Отсутствие передачи данных третьим лицам: Мы не передаем ваши данные
+    рекламным сервисам, брокерам данных или другим сторонним организациям. Вся
+    информация остается в рамках системы и используется исключительно для работы
+    и улучшения сервиса в соответствии с данной Политикой.
+  </p>
+  <p>
+    Несмотря на строгие меры защиты, ни один метод передачи данных через
+    интернет или электронного хранения не может гарантировать абсолютную
+    безопасность. Однако мы регулярно анализируем и совершенствуем наши подходы
+    к безопасности, чтобы обеспечить максимальную защиту ваших данных. В случае
+    выявления инцидента, связанного с безопасностью, пользователи будут
+    уведомлены в соответствии с законодательными требованиями
+  </p>
+  <h2>6. Ваши права</h2>
+
+  <p>
+    Мы считаем, что вы должны иметь контроль над своими персональными данными. В
+    соответствии с применимыми законами у вас есть следующие права в отношении
+    информации, хранящейся в ASpan:
+  </p>
+  <p>
+    <strong>Доступ к данным:</strong> Вы имеете право запросить копию
+    персональных данных, которые мы храним о вас. По запросу мы можем
+    предоставить вам сводную информацию, включая ваше имя пользователя, адрес
+    электронной почты и другие связанные данные (например, дату последней
+    активности).
+  </p>
+  <p>
+    <strong>Исправление данных: </strong>Если какие-либо ваши персональные
+    данные устарели или содержат ошибки (например, если вам необходимо обновить
+    имя пользователя), вы имеете право внести исправления. Вы можете обновить
+    имя пользователя через профиль в аккаунте либо обратиться к нам с запросом
+    на изменение данных, если хотите изменить почту или пароль
+  </p>
+  <p>
+    <strong>Удаление данных («Право быть забытым»): </strong>Вы можете запросить
+    удаление своих персональных данных. Это можно сделать связавшись с нами
+    напрямую. После подтверждения вашей личности и владения аккаунтом мы удалим
+    или анонимизируем ваши данные в нашей системе. Обратите внимание, что в
+    некоторых случаях нам может потребоваться сохранить минимальный объем
+    информации в целях выполнения законодательных требований или обеспечения
+    безопасности (например, мы можем оставить запись о том, что определенный
+    адрес электронной почты принадлежал удаленному аккаунту, чтобы предотвратить
+    мошенничество или повторное использование учетной записи). В случае
+    необходимости такого сохранения данных мы вас уведомим.
+  </p>
+  <p>
+    <strong>Ограничение или возражение против обработки данных: </strong>В
+    определенных обстоятельствах вы имеете право возражать против обработки
+    своих данных или запрашивать ограничение их использования. Например, если вы
+    считаете, что данные содержат ошибки или обработка осуществляется с
+    нарушением закона, вы можете потребовать ограничить их использование до
+    разрешения вопроса. Поскольку ASpan обрабатывает данные исключительно для
+    предоставления некоммерческого сервиса, отказ от обработки необходимых
+    данных (например, адреса электронной почты или пароля) может привести к
+    невозможности дальнейшего использования платформы. В случае реализации
+    данного права мы уведомим вас о возможных последствиях.
+  </p>
+  <p>
+    <strong>Отзыв согласия: </strong>В редких случаях, когда мы запрашиваем ваше
+    согласие на обработку персональных данных (например, при внедрении новых
+    функций), вы можете отозвать его в любой момент. Отзыв согласия не влияет на
+    законность обработки, осуществленной до момента отзыва. В настоящее время
+    ASpan не использует согласие в качестве правового основания для обработки
+    данных, за исключением принятия Политики конфиденциальности и Условий
+    использования при использовании платформы.
+  </p>
+  <p>
+    <strong>Как реализовать свои права: </strong>Вы можете воспользоваться любым
+    из перечисленных прав, связавшись с нами (см. раздел «Свяжитесь с нами» в
+    конце данной Политики). В целях обеспечения безопасности мы можем запросить
+    подтверждение личности перед предоставлением данных. Мы обязуемся отвечать
+    на запросы в разумные сроки, в соответствии с требованиями законодательства
+    (в течение 30 дней). Запросы обрабатываются бесплатно, однако в случае явно
+    необоснованных или повторяющихся запросов мы можем отказать в их исполнении,
+    если это допускается законом.
+  </p>
+  <p>
+    Обратите внимание, что удаление данных или возражение против их обработки
+    может повлиять на возможность использования ASpan. Мы всегда разъясним
+    последствия вашего запроса (например, удаление аккаунта приведет к потере
+    доступа к сохраненному прогрессу).
+  </p>
+  <h2>7. Политика в отношении детей</h2>
+
+  <p>
+    Защита конфиденциальности юных пользователей особенно важна для нас. ASpan
+    предназначен для широкой аудитории учащихся и не ориентирован
+    непосредственно на детей младше 13 лет. Мы признаем необходимость
+    предоставления дополнительных мер защиты данных для пользователей младше 16
+    лет в соответствии с GDPR-K и COPPA.
+  </p>
+  <p>
+    <strong>Регистрация только с согласия родителей</strong> для пользователей
+    младше 16 лет
+  </p>
+  <p>
+    Наше приложение предназначено для пользователей от 4 лет и старше. Однако,
+    если вам менее 16 лет, ваша учетная запись должна быть создана вашим
+    родителем или законным представителем. Мы не собираем и не обрабатываем
+    личные данные несовершеннолетних без согласия их родителей или опекунов.
+  </p>
+  <p>
+    <strong>Права родителей. </strong>Если вы родитель или законный
+    представитель и считаете, что мы случайно собрали личные данные вашего
+    ребенка без вашего согласия, пожалуйста, свяжитесь с нами. Мы оперативно
+    рассмотрим ваш запрос и при необходимости удалим данные ребенка.
+  </p>
+  <p>
+    <strong>Образовательное использование. </strong>Если ASpan используется в
+    образовательных учреждениях для учащихся младше 16 лет, мы ожидаем, что
+    школа или преподаватель получили все необходимые согласия от родителей или
+    действуют в качестве их уполномоченных представителей (в соответствии с
+    исключением "школьного официального лица" в COPPA). Мы по-прежнему не будем
+    использовать или передавать персональные данные учащихся в коммерческих
+    целях.
+  </p>
+  <p>
+    Используя ASpan, несовершеннолетние пользователи подтверждают, что их
+    учетная запись была создана родителем или законным представителем. Мы
+    соблюдаем все применимые законы о конфиденциальности детей и будем обновлять
+    нашу политику в случае изменений в законодательстве.
+  </p>
+  <h2>8. Изменения в политике конфиденциальности</h2>
+
+  <p>
+    Мы можем обновлять или изменять настоящую Политику конфиденциальности, чтобы
+    отражать изменения в нашей деятельности, соблюдать требования
+    законодательства или учитывать иные операционные, правовые и нормативные
+    факторы. В случае изменений мы предпримем следующие меры:
+  </p>
+  <p>
+    <strong>Уведомление об изменениях</strong>. Обновленная версия Политики
+    конфиденциальности будет размещена в приложении и (при наличии) на нашем
+    веб-сайте с указанием новой даты «Последнее обновление». В случае
+    значительных изменений мы предоставим более заметное уведомление, например,
+    с помощью всплывающего сообщения в приложении или уведомления на электронную
+    почту, связанную с учетной записью пользователя.
+  </p>
+  <p>
+    <strong>Согласие с изменениями. </strong>Продолжая использовать приложение
+    после вступления обновленной Политики конфиденциальности в силу, вы
+    автоматически соглашаетесь с ее новыми условиями. Однако если изменения
+    требуют отдельного согласия в соответствии с законодательством (например,
+    если мы начнем собирать дополнительные данные или использовать их для новых
+    целей, требующих согласия), мы запросим его у вас отдельно.
+  </p>
+  <p>
+    <strong>Ознакомление с актуальной версией</strong>. Мы рекомендуем вам
+    периодически проверять Политику конфиденциальности, чтобы оставаться в курсе
+    того, как защищаются ваши данные. Актуальная версия Политики всегда доступна
+    в приложении и на веб-сайте. По запросу пользователи также могут
+    ознакомиться с предыдущими версиями документа.
+  </p>
+  <p>
+    Если вы не согласны с изменениями в Политике конфиденциальности, вы можете
+    прекратить использование приложения и запросить удаление своих данных (см.
+    раздел «Ваши права»). Мы не будем применять изменения Политики
+    конфиденциальности задним числом без вашего явного согласия.
+  </p>
+  <h2>9. Контактная информация</h2>
+
+  <p>
+    Если у вас есть вопросы по поводу конфиденциальности или вы хотите удалить
+    свои данные, свяжитесь с нами:
+  </p>
+  <p><strong>Email</strong>: aspanapp.kz@gmail.com</p>
+  <p>
+    <strong>Почтовый адрес</strong>: 010000, Казахстан, г.Астана, Сейфуллина 8/2
+  </p>
+  <p>Мы ответим на ваш запрос в течение 30 дней.</p>
+  <p>
+    <strong
+      >Спасибо, что выбрали ASpan! Мы ценим вашу конфиденциальность и стремимся
+      создать безопасное образовательное пространство для всех
+      пользователей.</strong
     >
-  </p>
-  <p>
-    <strong>Data Controller:</strong> For the purposes of data protection laws,
-    the “controller” of your personal information is the ASpan
-    team/organization. [If applicable, include the official entity name once
-    available.]
-  </p>
-  <p>
-    We will do our best to respond promptly to your inquiries. Your privacy is
-    important to us, and we take all complaints or questions seriously. If you
-    contact us about a privacy issue, we may ask for verification of identity
-    before sharing any information, in order to protect against unauthorized
-    access to data.
-  </p>
-  <p>
-    Thank you for reading our Privacy Policy. By using ASpan, you place your
-    trust in us, and we are committed to honoring that trust by keeping your
-    personal information safe and using it responsibly. We hope you enjoy
-    learning with ASpan, and we pledge to continue safeguarding your privacy
-    every step of the way.
   </p>
 </template>
 
