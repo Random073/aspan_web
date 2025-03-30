@@ -262,7 +262,7 @@ export default {
   }
 
   .item-icon {
-    height: 120px; /* Adjust image height */
+    height: 250px; /* Adjust image height */
     object-fit: cover;
   }
 
