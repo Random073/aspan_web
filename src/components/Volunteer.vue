@@ -19,9 +19,23 @@
     <!-- Volunteer Form Section -->
     <section class="volunteer-form-section">
       <div class="container">
+        <div class="volunteer-info">
+          <h2>Присоединяйтесь к нам в ASpan!</h2>
+          <p>
+            Мы всегда рады новым волонтёрам, которые помогут нам сделать
+            обучение ещё лучше. Если вы хотите внести свой вклад в развитие
+            ASpan – заполните форму и станьте частью нашей дружной команды!
+          </p>
+        </div>
         <div class="form-container">
           <!-- Paste your Google Form iframe link here -->
-          <iframe src="" frameborder="0"></iframe>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeQggJDlukXPuDo2jCwwgSavfEgSIPCmeTnLvE0ldWwLKmvjA/viewform?embedded=true"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            >Загрузка…</iframe
+          >
         </div>
       </div>
     </section>
@@ -136,6 +150,55 @@ export default {
   font-size: 18px;
   color: #526ea1;
   line-height: 1.5;
+}
+
+.volunteer-form-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.volunteer-info {
+  flex: 2;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.volunteer-info h2 {
+  font-size: 32px;
+  color: #1261d8;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.volunteer-info p {
+  font-size: 18px;
+  color: #526ea1;
+  line-height: 1.5;
+}
+
+.form-container {
+  flex: 3;
+  min-width: 300px;
+  padding: 20px;
+  max-height: 600px; /* Limit height if desired */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.form-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
 /* Mobile Styles */
