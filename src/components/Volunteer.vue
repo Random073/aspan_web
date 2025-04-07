@@ -40,7 +40,7 @@
       </div>
     </section>
 
-    <!-- Donation Section -->
+    <!-- Donation Section
     <section class="volunteer-donation-section">
       <div class="container donation-container">
         <div class="donation-image">
@@ -55,7 +55,7 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -110,7 +110,7 @@ export default {
   border: none;
 }
 
-/* Volunteer Donation Section */
+/* Volunteer Donation Section
 .volunteer-donation-section {
   background: linear-gradient(160deg, #e0efff, #f0faff);
   padding: 40px 20px;
@@ -150,7 +150,7 @@ export default {
   font-size: 18px;
   color: #526ea1;
   line-height: 1.5;
-}
+} */
 
 .volunteer-form-section {
   background-color: #ffffff;
@@ -215,7 +215,7 @@ export default {
   .volunteer-form-section {
     padding: 20px 10px;
   }
-  .volunteer-donation-section {
+  /* .volunteer-donation-section {
     padding: 20px 10px;
   }
   .donation-container {
@@ -224,6 +224,6 @@ export default {
   .donation-text {
     padding: 20px 0;
     text-align: center;
-  }
+  } */
 }
 </style>
