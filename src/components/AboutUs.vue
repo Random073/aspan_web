@@ -144,9 +144,9 @@ export default {
         },
         {
           id: 4,
-          name: "Исенов Нариман",
-          role: "Дизайнер",
-          photo: "assets/team/nariman.png",
+          name: "Кан Бен",
+          role: "CMO",
+          photo: "assets/team/ben.png",
         },
         {
           id: 5,
@@ -156,9 +156,9 @@ export default {
         },
         {
           id: 6,
-          name: "Кан Бен",
-          role: "Монтажер",
-          photo: "assets/team/ben.png",
+          name: "Исенов Нариман",
+          role: "Дизайнер",
+          photo: "assets/team/nariman.png",
         },
         {
           id: 7,
